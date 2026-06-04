@@ -1,3 +1,3 @@
-export default function BestVPN() {
+export default function Contact() {
     return <div>Page Content</div>;
   }
