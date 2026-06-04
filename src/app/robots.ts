@@ -7,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
 
-    sitemap:
-      "https://offersmania.com/sitemap.xml",
+    sitemap: "https://offersmania.net/sitemap.xml",
   };
 }
