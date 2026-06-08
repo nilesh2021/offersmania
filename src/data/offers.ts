@@ -9,6 +9,8 @@ export const offers: Record<string, string> = {
     "https://t.crdtg2.com/358917/7346?aff_sub5=SF_006OG000004ImDN",
 
    "usa-dating":
-    "https://t.crdtg2.com/358917/7346?aff_sub5=SF_006OG000004ImDN"
-    
+    "https://t.crdtg2.com/358917/7346?aff_sub5=SF_006OG000004ImDN",
+
+  gaybloom:
+    "https://t.crdtg3.com/358917/10378/0?po=6456&aff_sub5=SF_006OG000004lmDN",
 };  

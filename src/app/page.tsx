@@ -10,31 +10,31 @@ export default function Home() {
 
         <div className="mx-auto max-w-6xl px-4 text-center">
 
-          <h1 className="mb-6 text-5xl font-bold md:text-7xl">
-            Find the Best Dating Sites in 2026
-          </h1>
+         <h1 className="mb-6 text-5xl font-bold md:text-7xl">
+  Discover The Best Online Offers & Tools
+</h1>
 
-          <p className="mx-auto max-w-3xl text-xl text-slate-300">
-           Compare dating platforms, discover relationship-focused apps, and find the right match.
-          </p>
-
+<p className="mx-auto max-w-3xl text-xl text-slate-300">
+  Compare dating sites, AI tools, software, online services,
+  and trending digital products all in one place.
+</p>
           <div className="mt-8 flex justify-center gap-4">
 
-            <Link
-              href="/ai"
-              className="rounded-lg bg-white px-6 py-3 font-semibold text-black"
-            >
-              Explore AI Tools
-            </Link>
+  <Link
+    href="/dating"
+    className="rounded-lg bg-white px-6 py-3 font-semibold text-black"
+  >
+    Explore Dating Offers
+  </Link>
 
-            <Link
-              href="/blog"
-              className="rounded-lg border border-white px-6 py-3"
-            >
-              Read Blog
-            </Link>
+  <Link
+    href="/software"
+    className="rounded-lg border border-white px-6 py-3"
+  >
+    Browse Software
+  </Link>
 
-          </div>
+</div>
         </div>
       </section>
 
@@ -48,18 +48,18 @@ export default function Home() {
             Popular Categories
           </h2>
 
-          <div className="grid gap-8 md:grid-cols-3">
+         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
        <Link
               href="/dating"
               className="rounded-xl border p-8 transition hover:shadow-lg"
             >
               <h3 className="mb-3 text-2xl font-bold">
-                Dating
+              Dating Sites
               </h3>
 
               <p>
-                Dating platforms and
-                relationship resources.
+               Compare dating platforms,
+relationship apps, and niche dating communities.
               </p>
             </Link>
             <Link
@@ -71,8 +71,8 @@ export default function Home() {
               </h3>
 
               <p>
-                ChatGPT alternatives,
-                AI writing tools and more.
+               AI chatbots, writing assistants,
+image generators and productivity tools.
               </p>
             </Link>
 
@@ -87,8 +87,8 @@ export default function Home() {
               </h3>
 
               <p>
-                VPNs, antivirus and
-                productivity software.
+               VPNs, antivirus programs,
+business software and utilities.
               </p>
             </Link>
 
@@ -97,19 +97,65 @@ export default function Home() {
               className="rounded-xl border p-8 transition hover:shadow-lg"
             >
               <h3 className="mb-3 text-2xl font-bold">
-                Blog
+                Guides & Reviews
               </h3>
 
               <p>
-                VPNs, antivirus and
-                productivity software.
+              Expert comparisons,
+tutorials and buying guides.
               </p>
             </Link>
 
           </div>
         </div>
       </section>
+{/* Statistics Section */}
 
+<section className="bg-slate-900 py-20 text-white">
+  <div className="mx-auto max-w-6xl px-4">
+
+    <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+
+      <div className="text-center">
+        <h3 className="text-5xl font-bold text-cyan-400">
+          100+
+        </h3>
+        <p className="mt-3 text-slate-300">
+          Offers Reviewed
+        </p>
+      </div>
+
+      <div className="text-center">
+        <h3 className="text-5xl font-bold text-violet-400">
+          50+
+        </h3>
+        <p className="mt-3 text-slate-300">
+          Software Tools
+        </p>
+      </div>
+
+      <div className="text-center">
+        <h3 className="text-5xl font-bold text-emerald-400">
+          25+
+        </h3>
+        <p className="mt-3 text-slate-300">
+          Buying Guides
+        </p>
+      </div>
+
+      <div className="text-center">
+        <h3 className="text-5xl font-bold text-amber-400">
+          100+
+        </h3>
+        <p className="mt-3 text-slate-300">
+          Product Comparisons
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
       {/* Why Choose Us */}
 
       <section className="bg-slate-50 py-20">
@@ -128,30 +174,29 @@ export default function Home() {
               </h3>
 
               <p>
-                Honest reviews based on
-                research and analysis.
+               We research and compare online products
+to help users make informed decisions.
               </p>
             </div>
 
             <div className="rounded-xl bg-white p-8 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
-                Compare Products
-              </h3>
+              Easy Comparisons </h3>
 
               <p>
-                Compare features, pricing,
-                and benefits quickly.
+               Compare features, pricing,
+pros and cons in one place.
               </p>
             </div>
 
             <div className="rounded-xl bg-white p-8 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
-                Save Time
+             Updated Regularly
               </h3>
 
               <p>
-                Discover the best tools
-                without hours of research.
+               New tools, offers and reviews
+added frequently.
               </p>
             </div>
 

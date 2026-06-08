@@ -10,4 +10,5 @@ export const datingPages = [
     "tinder-alternatives",
     "serious-relationship-dating-sites",
     "bbw-dating-sites",
+    "gaybloom",
   ];

@@ -301,7 +301,7 @@ export default function BestDatingSitesGermanyPage() {
 
       {/* Reviews */}
       <section id="offers" className="px-4 py-16">
-        <div className="mx-auto max-w-5xl space-y-8">
+        <div className="mx-auto max-w-5xl space-y-5">
           <SectionHeading
             eyebrow="Reviews"
             title="Detailed Reviews"
@@ -311,65 +311,66 @@ export default function BestDatingSitesGermanyPage() {
           {offers.map((offer, index) => (
             <article
               key={offer.slug}
-              className={`${glassCard} group relative overflow-hidden p-8 md:p-10`}
+              className={`${glassCard} group relative overflow-hidden p-5 md:p-6`}
             >
-              {/* Rank glow accent */}
-              <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 blur-2xl transition group-hover:scale-150" />
+              <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 blur-2xl transition group-hover:scale-150" />
 
-              <div className="relative flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 text-lg font-bold shadow-lg shadow-pink-500/20">
+              <div className="relative flex flex-wrap items-center justify-between gap-3">
+                <div className="flex min-w-0 items-center gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 text-sm font-bold shadow-md shadow-pink-500/20">
                     {index + 1}
                   </span>
-                  <h3 className="text-2xl font-bold md:text-3xl">
-                    {offer.name}
-                  </h3>
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-bold md:text-xl">
+                      {offer.name}
+                    </h3>
+                    <p className="text-xs text-slate-400">{offer.bestFor}</p>
+                  </div>
                 </div>
-                <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-300">
+                <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-300">
                   {offer.rating}
                 </span>
               </div>
 
-              <p className="relative mt-5 text-slate-300">
-                {offer.name} is a popular platform for users interested in{" "}
-                {offer.bestFor.toLowerCase()}.
+              <p className="relative mt-3 text-sm leading-snug text-slate-400">
+                Popular for {offer.bestFor.toLowerCase()} in Germany.
               </p>
 
-              <div className="relative mt-8 grid gap-6 md:grid-cols-2">
-                <div className="rounded-2xl border border-emerald-400/20 bg-emerald-500/5 p-6">
-                  <h4 className="mb-4 flex items-center gap-2 text-lg font-semibold text-emerald-300">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 text-xs">
+              <div className="relative mt-4 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-xl border border-emerald-400/20 bg-emerald-500/5 p-4">
+                  <h4 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20 text-[10px]">
                       ✓
                     </span>
                     Pros
                   </h4>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-1">
                     {offer.pros.map((pro) => (
                       <li
                         key={pro}
-                        className="flex items-start gap-2.5 text-slate-300"
+                        className="flex items-start gap-2 text-sm text-slate-300"
                       >
-                        <span className="mt-0.5 text-emerald-400">✓</span>
+                        <span className="text-emerald-400">✓</span>
                         {pro}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="rounded-2xl border border-rose-400/20 bg-rose-500/5 p-6">
-                  <h4 className="mb-4 flex items-center gap-2 text-lg font-semibold text-rose-300">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-rose-500/20 text-xs">
+                <div className="rounded-xl border border-rose-400/20 bg-rose-500/5 p-4">
+                  <h4 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-rose-300">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-rose-500/20 text-[10px]">
                       ✗
                     </span>
                     Cons
                   </h4>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-1">
                     {offer.cons.map((con) => (
                       <li
                         key={con}
-                        className="flex items-start gap-2.5 text-slate-300"
+                        className="flex items-start gap-2 text-sm text-slate-300"
                       >
-                        <span className="mt-0.5 text-rose-400">✗</span>
+                        <span className="text-rose-400">✗</span>
                         {con}
                       </li>
                     ))}
@@ -379,7 +380,7 @@ export default function BestDatingSitesGermanyPage() {
 
               <Link
                 href={`/go/${offer.slug}`}
-                className="relative mt-8 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-4 font-semibold shadow-lg shadow-pink-500/20 transition hover:scale-[1.02] hover:shadow-pink-500/30"
+                className="relative mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 px-5 py-2.5 text-sm font-semibold shadow-md shadow-pink-500/20 transition hover:scale-[1.02] hover:shadow-pink-500/30"
               >
                 Visit {offer.name}
                 <span aria-hidden="true">→</span>
