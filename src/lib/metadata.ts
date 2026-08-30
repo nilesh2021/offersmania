@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const siteConfig = {
   name: "OffersMania",
   description:
-    "Discover AI tools, software reviews, dating platforms, and digital products.",
+    "Discover AI tools, software reviews, and digital products.",
   url: "https://offersmania.com",
 };
 

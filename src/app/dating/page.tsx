@@ -125,7 +125,7 @@ function GlassCard({
 
 export default function DatingPage() {
   return (
-    <main className="overflow-hidden bg-slate-950 text-white">
+    <div className="overflow-hidden bg-ink text-white">
       {/* Hero */}
       <section className="relative min-h-[92vh] flex flex-col justify-center px-4 py-24">
         <div
@@ -156,7 +156,7 @@ export default function DatingPage() {
 
           <h1 className="hero-title mx-auto max-w-4xl text-5xl font-bold tracking-tight text-white md:text-7xl">
             Best Dating Sites &{" "}
-            <span className="bg-gradient-to-r from-pink-300 via-rose-200 to-fuchsia-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-pink-500 via-rose-400 to-fuchsia-500 bg-clip-text text-transparent">
               Apps
             </span>
           </h1>
@@ -370,6 +370,6 @@ export default function DatingPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

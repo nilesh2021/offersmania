@@ -1,5 +1,4 @@
 import { MetadataRoute } from "next";
-import { datingPages } from "@/data/datingPages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://offersmania.net";
@@ -12,20 +11,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
     "/disclaimer",
     "/ai",
+    "/ai/best-ai-tools",
+    "/ai/chatgpt-vs-gemini-vs-claude",
+    "/ai/best-ai-writing-tools",
+    "/ai/best-ai-image-generators",
     "/software",
-    "/dating",
+    "/software/best-vpn",
+    "/software/best-antivirus",
+    "/software/avast-antivirus",
+    "/software/password-manager",
+    "/blog",
   ];
 
-  const datingRoutes = datingPages.map(
-    (slug) => `/dating/${slug}`
-  );
-
-  const routes = [...staticPages, ...datingRoutes];
-
-  return routes.map((route) => ({
+  return staticPages.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: route === "" ? 1 : 0.8,
   }));
 }

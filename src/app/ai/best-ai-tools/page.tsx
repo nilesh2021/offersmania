@@ -1,8 +1,10 @@
- import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "next";
+
+import Card from "@/components/ui/Card";
+import GuideLayout from "@/components/ui/GuideLayout";
 
 export const metadata: Metadata = {
-  title: "Best AI Tools in 2026 | OffersMania",
+  title: "Best AI Tools in 2026",
   description:
     "Discover the best AI tools for content creation, coding, design, marketing, and productivity.",
 };
@@ -10,140 +12,93 @@ export const metadata: Metadata = {
 const tools = [
   {
     name: "ChatGPT",
-    category: "AI Assistant",
-    description:
-      "Generate content, code, ideas, and research faster.",
+    category: "Assistant",
+    description: "General-purpose writing, coding, and research with a huge plugin ecosystem.",
   },
   {
     name: "Claude",
-    category: "AI Assistant",
-    description:
-      "Excellent for long-form writing and document analysis.",
+    category: "Assistant",
+    description: "Strong long-context writing, document analysis, and careful reasoning.",
   },
   {
     name: "Gemini",
-    category: "AI Assistant",
-    description:
-      "Google's AI platform with deep search integration.",
+    category: "Assistant",
+    description: "Google’s assistant with deep Search and Workspace integration.",
   },
   {
     name: "Midjourney",
-    category: "AI Image Generator",
-    description:
-      "Create high-quality AI-generated artwork and visuals.",
+    category: "Images",
+    description: "High-quality generated artwork and campaign visuals.",
   },
   {
     name: "GitHub Copilot",
-    category: "Coding Assistant",
-    description:
-      "Accelerate software development with AI-powered coding.",
+    category: "Coding",
+    description: "Inline coding assistance inside the editor you already use.",
   },
   {
     name: "Perplexity",
-    category: "AI Search",
-    description:
-      "Research topics quickly with cited answers.",
+    category: "Search",
+    description: "Cited answers for research when you need sources, not vibes.",
   },
 ];
 
 export default function BestAIToolsPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-slate-900 py-20 text-white">
-        <div className="mx-auto max-w-5xl px-4 text-center">
-          <h1 className="mb-6 text-5xl font-bold">
-            Best AI Tools in 2026
-          </h1>
+    <GuideLayout
+      accent="ai"
+      eyebrow="AI Roundup · 2026"
+      title="Best AI tools in 2026"
+      subtitle="Assistants, image models, coding tools, and research — the stack most teams actually keep."
+      related={[
+        {
+          title: "ChatGPT vs Gemini vs Claude",
+          description: "Head-to-head on writing and reasoning.",
+          href: "/ai/chatgpt-vs-gemini-vs-claude",
+          category: "Comparison",
+        },
+        {
+          title: "Best AI Writing Tools",
+          description: "Draft blogs, SEO, and email faster.",
+          href: "/ai/best-ai-writing-tools",
+          category: "Writing",
+        },
+        {
+          title: "Best AI Image Generators",
+          description: "Visual models for campaigns and product.",
+          href: "/ai/best-ai-image-generators",
+          category: "Images",
+        },
+      ]}
+    >
+      <p>
+        AI tools are no longer a novelty tab. They sit in writing, design,
+        support, and engineering workflows. The useful question is not “which
+        model is smartest” — it is which one matches the job, the budget, and
+        the data you can actually share with it.
+      </p>
+      <p>
+        Use this roundup as a shortlist. Then open a comparison guide for the
+        category you care about.
+      </p>
 
-          <p className="text-lg text-slate-300">
-            Explore the top AI tools for writing,
-            coding, image generation, research,
-            and productivity.
-          </p>
-        </div>
-      </section>
-
-      {/* Intro */}
-      <section className="mx-auto max-w-5xl px-4 py-16">
-        <h2 className="mb-4 text-3xl font-bold">
-          Why AI Tools Matter
-        </h2>
-
-        <p className="mb-4 text-slate-700">
-          Artificial Intelligence tools are helping
-          businesses and individuals automate tasks,
-          improve productivity, and generate content
-          faster than ever before.
-        </p>
-
-        <p className="text-slate-700">
-          Whether you are a marketer, developer,
-          designer, student, or entrepreneur, AI
-          software can help save time and increase
-          efficiency.
-        </p>
-      </section>
-
-      {/* Tool Cards */}
-      <section className="mx-auto max-w-6xl px-4 pb-16">
-        <h2 className="mb-8 text-3xl font-bold">
-          Top AI Tools
-        </h2>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {tools.map((tool) => (
-            <div
-              key={tool.name}
-              className="rounded-xl border p-6 shadow-sm"
-            >
-              <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700">
-                {tool.category}
-              </span>
-
-              <h3 className="mt-4 text-xl font-semibold">
-                {tool.name}
-              </h3>
-
-              <p className="mt-3 text-slate-600">
-                {tool.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Internal Links */}
-      <section className="bg-slate-50 py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="mb-6 text-3xl font-bold">
-            Related Articles
-          </h2>
-
-          <div className="space-y-4">
-            <Link
-              href="/ai/chatgpt-vs-gemini-vs-claude"
-              className="block rounded-lg border bg-white p-4 hover:shadow"
-            >
-              ChatGPT vs Gemini vs Claude
-            </Link>
-
-            <Link
-              href="/ai/best-ai-writing-tools"
-              className="block rounded-lg border bg-white p-4 hover:shadow"
-            >
-              Best AI Writing Tools
-            </Link>
-
-            <Link
-              href="/ai/best-ai-image-generators"
-              className="block rounded-lg border bg-white p-4 hover:shadow"
-            >
-              Best AI Image Generators
-            </Link>
-          </div>
-        </div>
-      </section>
-    </main>
+      <h2 className="font-display pt-4 text-2xl font-semibold text-white">
+        Top tools
+      </h2>
+      <div className="grid gap-4 pt-2 md:grid-cols-2">
+        {tools.map((tool) => (
+          <Card key={tool.name} className="p-5">
+            <span className="inline-flex rounded-full border border-cyan-400/25 bg-cyan-400/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-cyan-200">
+              {tool.category}
+            </span>
+            <h3 className="font-display mt-3 text-xl font-semibold text-white">
+              {tool.name}
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-400">
+              {tool.description}
+            </p>
+          </Card>
+        ))}
+      </div>
+    </GuideLayout>
   );
 }

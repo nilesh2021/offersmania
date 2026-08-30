@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Code2, GraduationCap } from "lucide-react";
+
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
+import ArticleCard from "@/components/ui/ArticleCard";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Card from "@/components/ui/Card";
 
 export const metadata: Metadata = {
-  title: "Best AI Tools & Reviews 2026 | OffersMania",
+  title: "Best AI Tools & Reviews 2026",
   description:
     "Discover the best AI tools, ChatGPT alternatives, AI writing software, image generators, and productivity tools.",
 };
@@ -11,115 +18,135 @@ const aiArticles = [
   {
     title: "Best AI Tools in 2026",
     description:
-      "Discover the top AI tools for content creation, coding, marketing, and productivity.",
+      "Top AI tools for content, coding, marketing, and everyday productivity.",
     href: "/ai/best-ai-tools",
+    category: "Roundup",
   },
   {
     title: "ChatGPT vs Gemini vs Claude",
     description:
-      "Compare the most popular AI assistants and find the best option for your needs.",
+      "How the leading assistants compare on writing, reasoning, and research.",
     href: "/ai/chatgpt-vs-gemini-vs-claude",
+    category: "Comparison",
   },
   {
     title: "Best AI Writing Tools",
     description:
-      "Explore AI writing tools for blogs, SEO content, emails, and marketing copy.",
+      "Draft blogs, SEO copy, and emails without starting from a blank page.",
     href: "/ai/best-ai-writing-tools",
+    category: "Writing",
   },
   {
     title: "Best AI Image Generators",
     description:
-      "Compare AI image generators for designers, marketers, and content creators.",
+      "Visual models for designers, marketers, and content teams.",
     href: "/ai/best-ai-image-generators",
-  },
-  {
-    title: "Best AI Coding Assistants",
-    description:
-      "Discover AI coding tools that help developers build applications faster.",
-    href: "/ai/best-ai-coding-assistants",
-  },
-  {
-    title: "Best AI Tools for Students",
-    description:
-      "Learn how students can use AI tools for studying, research, and productivity.",
-    href: "/ai/best-ai-tools-for-students",
+    category: "Images",
   },
 ];
 
 export default function AIPage() {
   return (
-    <main>
-      {/* Hero Section */}
-      <section className="bg-slate-900 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 text-center">
-          <h1 className="mb-6 text-5xl font-bold md:text-6xl">
-            Best AI Tools & Reviews
+    <div className="overflow-hidden bg-ink text-white">
+      <section className="relative min-h-[78vh] px-4 py-24">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(34,211,238,0.28),transparent)]"
+          aria-hidden
+        />
+        <div className="pointer-events-none absolute inset-0 bg-grid" />
+        <div
+          className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-violet-600/20 blur-[110px]"
+          aria-hidden
+        />
+
+        <Container className="relative z-10 flex min-h-[60vh] flex-col items-center justify-center text-center">
+          <Badge pulse className="border-cyan-400/30 text-cyan-100">
+            AI Rankings 2026
+          </Badge>
+          <h1 className="font-display mt-6 max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
+            Best AI tools &{" "}
+            <span className="bg-gradient-to-r from-cyan-600 via-sky-500 to-violet-500 bg-clip-text text-transparent">
+              reviews
+            </span>
           </h1>
-
-          <p className="mx-auto max-w-3xl text-lg text-slate-300">
-            Explore the latest AI tools, software reviews,
-            comparisons, and productivity solutions to help
-            you work smarter and faster.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            Assistants, writing software, image models, and coding tools —
+            compared so you spend less time testing and more time shipping.
           </p>
-        </div>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Button href="/ai/best-ai-tools" variant="primary">
+              See top tools
+            </Button>
+            <Button href="/ai/chatgpt-vs-gemini-vs-claude" variant="secondary">
+              Compare assistants
+            </Button>
+          </div>
+        </Container>
       </section>
 
-      {/* Featured Articles */}
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <h2 className="mb-10 text-center text-3xl font-bold">
-          Popular AI Articles
-        </h2>
+      <section className="px-4 pb-20">
+        <Container>
+          <SectionHeading
+            accent="ai"
+            eyebrow="Guides"
+            title="Popular AI articles"
+            subtitle="Start with a roundup or jump into a head-to-head."
+          />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {aiArticles.map((article) => (
+              <ArticleCard key={article.href} {...article} />
+            ))}
+          </div>
+        </Container>
+      </section>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {aiArticles.map((article) => (
-            <Link
-              key={article.href}
-              href={article.href}
-              className="rounded-xl border bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <h3 className="mb-3 text-xl font-semibold">
-                {article.title}
-              </h3>
-
-              <p className="text-slate-600">
-                {article.description}
+      <section className="px-4 pb-24">
+        <Container size="md">
+          <Card className="p-8 md:p-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+              Why it matters
+            </p>
+            <h2 className="font-display mt-3 text-3xl font-bold md:text-4xl">
+              Why use AI tools?
+            </h2>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-slate-300">
+              <p>
+                AI tools now sit in the workflow for writing, design, research,
+                and software. The right stack cuts busywork without replacing
+                judgment.
               </p>
-
-              <span className="mt-4 inline-block font-medium text-blue-600">
-                Read More →
-              </span>
-            </Link>
-          ))}
-        </div>
+              <p>
+                Students, marketers, developers, and operators all need
+                different strengths — speed, citations, visuals, or code.
+              </p>
+              <p className="text-slate-400">
+                OffersMania compares leading options so you can match a tool to
+                the job, not the launch-week hype.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
+                <Code2 className="mt-0.5 h-5 w-5 text-cyan-300" />
+                <div>
+                  <p className="font-medium">Builders</p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Coding assistants and research models.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
+                <GraduationCap className="mt-0.5 h-5 w-5 text-violet-300" />
+                <div>
+                  <p className="font-medium">Learners</p>
+                  <p className="mt-1 text-sm text-slate-400">
+                    Study, outline, and research helpers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </Container>
       </section>
-
-      {/* Content Section */}
-      <section className="bg-slate-50 py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="mb-6 text-3xl font-bold">
-            Why Use AI Tools?
-          </h2>
-
-          <p className="mb-4 text-lg text-slate-700">
-            Artificial Intelligence tools are transforming
-            how people write content, generate images,
-            develop software, conduct research, and manage
-            everyday tasks.
-          </p>
-
-          <p className="mb-4 text-lg text-slate-700">
-            Whether you are a student, blogger, marketer,
-            designer, or business owner, AI tools can help
-            increase productivity and save valuable time.
-          </p>
-
-          <p className="text-lg text-slate-700">
-            At OffersMania, we review and compare leading
-            AI solutions so you can choose the right tool
-            for your needs.
-          </p>
-        </div>
-      </section>
-    </main>
+    </div>
   );
 }
