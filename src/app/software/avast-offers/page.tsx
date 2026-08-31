@@ -56,14 +56,14 @@ const plans = [
     name: "Avast Free Antivirus",
     bestFor: "Essential baseline",
     note: "Core antivirus protection for everyday browsing and downloads.",
-    placement: "avast_alt_free_cta",
+    placement: "avast_offers_free_cta",
     highlights: ["Real-time antivirus", "Basic web protection", "Windows, Mac, mobile"],
   },
   {
     name: "Avast Premium Security",
     bestFor: "Most popular",
     note: "Adds stronger web, ransomware, and multi-device-oriented protections.",
-    placement: "avast_alt_premium_cta",
+    placement: "avast_offers_premium_cta",
     featured: true,
     highlights: [
       "Full web & ransomware shield",
@@ -75,7 +75,7 @@ const plans = [
     name: "Avast Ultimate",
     bestFor: "Full suite",
     note: "Bundles premium security with extra privacy and identity-focused tools.",
-    placement: "avast_alt_ultimate_cta",
+    placement: "avast_offers_ultimate_cta",
     highlights: [
       "Everything in Premium",
       "VPN & cleanup tools",
@@ -175,11 +175,11 @@ function AvastCta({
   );
 }
 
-export default function AvastAntivirusAltPage() {
+export default function AvastOffersPage() {
   return (
     <div className="bg-ink text-fg">
       <Script
-        id="avast-alt-faq-schema"
+        id="avast-offers-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
@@ -199,7 +199,7 @@ export default function AvastAntivirusAltPage() {
               partner offers to pick the right protection for your devices.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <AvastCta placement="avast_alt_hero_cta" />
+              <AvastCta placement="avast_offers_hero_cta" />
               <Button href="/software/best-antivirus" variant="secondary" size="lg">
                 All antivirus guides
               </Button>
@@ -422,7 +422,7 @@ export default function AvastAntivirusAltPage() {
               devices.
             </p>
             <div className="mt-8 flex justify-center">
-              <AvastCta placement="avast_alt_final_cta" />
+              <AvastCta placement="avast_offers_final_cta" />
             </div>
           </Card>
         </Container>
