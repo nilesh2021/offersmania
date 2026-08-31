@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,6 +15,12 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+
+export const metadata: Metadata = {
+  other: {
+    "impact-site-verification": "bbf507ac-9ef6-4fce-8439-fcd5938f83cf",
+  },
+};
 
 const categories = [
   {
