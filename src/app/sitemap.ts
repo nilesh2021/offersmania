@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/software/best-vpn",
     "/software/best-antivirus",
     "/software/avast-antivirus",
+    "/software/avast-antivirus-alt",
     "/software/password-manager",
     "/blog",
   ];

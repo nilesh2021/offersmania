@@ -11,13 +11,13 @@ export default function Card({
   className = "",
   href,
 }: Props) {
-  const classes = `surface-card rounded-2xl ${className}`;
+  const classes = `surface-card rounded-xl ${className}`;
 
   if (href) {
     return (
       <Link
         href={href}
-        className={`group block transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--card-hover)] ${classes}`}
+        className={`group block transition-colors duration-200 hover:bg-[var(--card-hover)] ${classes}`}
       >
         {children}
       </Link>

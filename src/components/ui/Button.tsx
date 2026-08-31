@@ -14,19 +14,19 @@ type Props = {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-fg)] shadow-lg shadow-black/10 hover:opacity-90",
+    "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-fg)] shadow-sm hover:opacity-90",
   secondary:
-    "border border-[var(--btn-secondary-border)] bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-fg)] backdrop-blur-md hover:border-[var(--line-strong)]",
+    "border border-[var(--btn-secondary-border)] bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-fg)] hover:border-[var(--line-strong)] hover:bg-[var(--card-hover)]",
   ghost:
-    "border border-line bg-card text-fg hover:bg-[var(--card-hover)]",
+    "border border-transparent bg-transparent text-muted hover:border-line hover:bg-[var(--card-hover)] hover:text-fg",
   accent:
-    "stay-white bg-gradient-to-r from-violet-500 to-indigo-500 text-white shadow-lg shadow-violet-500/25 hover:from-violet-400 hover:to-indigo-400",
+    "stay-white bg-brand text-white shadow-sm hover:opacity-90",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-sm",
-  lg: "px-8 py-3.5 text-[15px]",
+  sm: "h-9 px-4 text-sm",
+  md: "h-10 px-5 text-sm",
+  lg: "h-11 px-6 text-[15px]",
 };
 
 export default function Button({
@@ -37,7 +37,7 @@ export default function Button({
   className = "",
   external,
 }: Props) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition duration-200 hover:scale-[1.02] active:scale-[0.98] ${variants[variant]} ${sizes[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-lg font-semibold tracking-tight transition-colors duration-150 ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (external) {
     return (

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem("om-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.setAttribute("data-theme","dark");document.documentElement.style.colorScheme="dark";}})();`;
+const themeInitScript = `(function(){try{var t=localStorage.getItem("om-theme")||"light";document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.setAttribute("data-theme","light");document.documentElement.style.colorScheme="light";}})();`;
 
 export default function RootLayout({
   children,
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="dark"
+      data-theme="light"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
       className={`${outfit.variable} ${jakarta.variable}`}
@@ -60,7 +60,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-ink font-sans text-fg antialiased">
         <ThemeProvider>
           <Header />
-          <main>{children}</main>
+          <main className="min-h-[calc(100vh-var(--header-h))]">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
