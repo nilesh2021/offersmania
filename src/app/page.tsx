@@ -18,7 +18,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   other: {
-    "impact-site-verification": "38650714-f28a-47c5-a6a1-1e26d3d1d43a",
+    "impact-site-verification": "b6c96ac6-98af-4b34-aceb-1053a52fe0de",
   },
 };
 
