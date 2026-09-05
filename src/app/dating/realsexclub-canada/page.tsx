@@ -12,13 +12,13 @@ export default function RealSexClubCanadaPage() {
 
   return (
     <main className="bg-slate-950 text-white min-h-screen">
-      {/* Hero */}<div className="mb-6 rounded-lg border border-pink-500/30 bg-pink-500/10 p-4 text-sm text-slate-300">
+      {/* Hero */}<div className="mb-6 rounded-lg border border-[#4f00ca]/30 bg-[#4f00ca]/10 p-4 text-sm text-slate-300">
   This page contains information intended for adults 18 years or older.
 </div>
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
 
-          <div className="inline-flex items-center rounded-full bg-pink-600/20 text-pink-400 px-4 py-2 text-sm font-medium mb-6">
+          <div className="inline-flex items-center rounded-full bg-[#4f00ca]/20 text-brand px-4 py-2 text-sm font-medium mb-6">
             #1 Adult Dating Platform In Canada
           </div>
 
@@ -36,7 +36,7 @@ export default function RealSexClubCanadaPage() {
             href={affiliateLink}
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
-            className="inline-flex items-center rounded-xl bg-pink-600 hover:bg-pink-500 px-8 py-4 font-semibold text-lg transition"
+            className="inline-flex items-center rounded-xl bg-[#4f00ca] hover:bg-[#3d00a0] px-8 py-4 font-semibold text-lg transition"
           >
             Visit RealSexClub →
           </a>
@@ -105,7 +105,7 @@ export default function RealSexClubCanadaPage() {
                 href={affiliateLink}
                 target="_blank"
                rel="nofollow sponsored noopener noreferrer"
-                className="inline-flex rounded-xl bg-pink-600 hover:bg-pink-500 px-8 py-4 font-semibold transition"
+                className="inline-flex rounded-xl bg-[#4f00ca] hover:bg-[#3d00a0] px-8 py-4 font-semibold transition"
               >
                 Start Exploring →
               </a>
@@ -203,7 +203,7 @@ export default function RealSexClubCanadaPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-4 py-20 bg-gradient-to-r from-pink-600 to-purple-600">
+      <section className="px-4 py-20 bg-gradient-to-r from-[#4f00ca] to-[#7b3dff]">
         <div className="max-w-4xl mx-auto text-center">
 
           <h2 className="text-4xl font-bold mb-6">

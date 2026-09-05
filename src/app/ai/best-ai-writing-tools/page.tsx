@@ -63,7 +63,7 @@ export default function BestAIWritingTools() {
       <div className="grid gap-4 pt-4 md:grid-cols-2">
         {tools.map((tool) => (
           <Card key={tool.name} className="p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">
               {tool.bestFor}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-white">

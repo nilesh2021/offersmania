@@ -35,7 +35,7 @@ export default function SeriousRelationshipDatingSitesPage() {
       />
       {/* Hero */}
 
-      <section className="bg-gradient-to-r from-purple-700 to-pink-700 py-20 text-white">
+      <section className="bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] py-20 text-white">
         <div className="mx-auto max-w-6xl px-4 text-center">
 
           <span className="rounded-full bg-white/20 px-4 py-2 text-sm">

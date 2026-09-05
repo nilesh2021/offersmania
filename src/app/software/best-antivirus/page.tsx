@@ -68,7 +68,7 @@ export default function BestAntivirus() {
       <div className="grid gap-4 pt-4 md:grid-cols-2">
         {products.map((item) => (
           <Card key={item.name} className="p-5" href={item.href}>
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">
               {item.bestFor}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-white">
@@ -76,7 +76,7 @@ export default function BestAntivirus() {
             </h3>
             <p className="mt-2 text-sm text-slate-400">{item.note}</p>
             {item.href && (
-              <p className="mt-3 text-sm font-semibold text-emerald-300">
+              <p className="mt-3 text-sm font-semibold text-brand">
                 View offers →
               </p>
             )}

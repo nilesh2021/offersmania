@@ -87,7 +87,7 @@ export default function BestAIToolsPage() {
       <div className="grid gap-4 pt-2 md:grid-cols-2">
         {tools.map((tool) => (
           <Card key={tool.name} className="p-5">
-            <span className="inline-flex rounded-full border border-cyan-400/25 bg-cyan-400/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-cyan-200">
+            <span className="inline-flex rounded-full border border-[#4f00ca]/25 bg-[#4f00ca]/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand">
               {tool.category}
             </span>
             <h3 className="font-display mt-3 text-xl font-semibold text-white">

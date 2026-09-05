@@ -60,12 +60,12 @@ export default function BestDatingSitesUSAPage() {
 
       <section className="relative px-4 pb-20 pt-10">
         <Container className="text-center">
-          <span className={`${glass} inline-flex px-4 py-2 text-sm font-medium text-pink-100`}>
+          <span className={`${glass} inline-flex px-4 py-2 text-sm font-medium text-brand`}>
             USA Dating Guide 2026
           </span>
           <h1 className="font-display mt-6 text-4xl font-bold tracking-tight md:text-6xl">
             Best dating sites in the{" "}
-            <span className="bg-gradient-to-r from-pink-500 via-rose-400 to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4f00ca] via-[#7b3dff] to-[#9b6dff] bg-clip-text text-transparent">
               United States
             </span>
           </h1>
@@ -128,14 +128,14 @@ export default function BestDatingSitesUSAPage() {
                     <td className="p-5 font-semibold">{offer.name}</td>
                     <td className="p-5 text-slate-300">{offer.bestFor}</td>
                     <td className="p-5">
-                      <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300">
+                      <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm text-brand">
                         {offer.rating}
                       </span>
                     </td>
                     <td className="p-5 text-center">
                       <Link
                         href={`/go/${offer.slug}`}
-                        className="inline-flex rounded-full bg-gradient-to-r from-pink-500 to-rose-600 px-4 py-2 text-sm font-semibold"
+                        className="inline-flex rounded-full bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-4 py-2 text-sm font-semibold"
                       >
                         Visit
                       </Link>
@@ -150,13 +150,13 @@ export default function BestDatingSitesUSAPage() {
               <div key={offer.slug} className={`${glass} p-5`}>
                 <div className="flex items-center justify-between">
                   <span className="font-semibold">{offer.rank}</span>
-                  <span className="text-sm text-emerald-300">{offer.rating}</span>
+                  <span className="text-sm text-brand">{offer.rating}</span>
                 </div>
                 <h3 className="mt-2 text-lg font-semibold">{offer.name}</h3>
                 <p className="text-sm text-slate-400">{offer.bestFor}</p>
                 <Link
                   href={`/go/${offer.slug}`}
-                  className="mt-4 inline-flex rounded-full bg-pink-600 px-4 py-2 text-sm font-semibold"
+                  className="mt-4 inline-flex rounded-full bg-[#4f00ca] px-4 py-2 text-sm font-semibold"
                 >
                   Visit site
                 </Link>
@@ -174,7 +174,7 @@ export default function BestDatingSitesUSAPage() {
                 <h2 className="font-display text-2xl font-bold md:text-3xl">
                   {offer.rank} {offer.name}
                 </h2>
-                <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300">
+                <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm text-brand">
                   {offer.rating}
                 </span>
               </div>
@@ -184,7 +184,7 @@ export default function BestDatingSitesUSAPage() {
               </p>
               <div className="mt-6 grid gap-6 md:grid-cols-2">
                 <div>
-                  <h3 className="mb-3 font-semibold text-emerald-300">Pros</h3>
+                  <h3 className="mb-3 font-semibold text-brand">Pros</h3>
                   <ul className="space-y-2 text-sm text-slate-300">
                     {offer.pros.map((pro) => (
                       <li key={pro}>✓ {pro}</li>
@@ -202,7 +202,7 @@ export default function BestDatingSitesUSAPage() {
               </div>
               <Link
                 href={`/go/${offer.slug}`}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 px-6 py-3 text-sm font-semibold"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-6 py-3 text-sm font-semibold"
               >
                 Visit {offer.name}
                 <ArrowUpRight className="h-4 w-4" />
@@ -231,7 +231,7 @@ export default function BestDatingSitesUSAPage() {
 
       <section className="px-4 pb-24">
         <Container>
-          <div className={`${glass} bg-gradient-to-br from-pink-600/25 to-fuchsia-800/20 px-8 py-14 text-center md:px-16`}>
+          <div className={`${glass} bg-gradient-to-br from-[#4f00ca]/25 to-[#3d00a0]/20 px-8 py-14 text-center md:px-16`}>
             <h2 className="font-display text-3xl font-bold md:text-4xl">
               Ready to start dating?
             </h2>

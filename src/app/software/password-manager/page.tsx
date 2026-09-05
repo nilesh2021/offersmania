@@ -62,7 +62,7 @@ export default function PasswordManager() {
       <div className="grid gap-4 pt-4 md:grid-cols-2">
         {products.map((item) => (
           <Card key={item.name} className="p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">
               {item.bestFor}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-white">

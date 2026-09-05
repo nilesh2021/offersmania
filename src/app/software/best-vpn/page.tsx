@@ -66,7 +66,7 @@ export default function BestVPN() {
       <div className="grid gap-4 pt-4 md:grid-cols-2">
         {vpns.map((vpn) => (
           <Card key={vpn.name} className="p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">
               {vpn.bestFor}
             </p>
             <h3 className="font-display mt-2 text-xl font-semibold text-white">

@@ -204,7 +204,7 @@ export default function AvastOffersPage() {
                 All antivirus guides
               </Button>
             </div>
-            <div className="mx-auto mt-8 h-1 w-16 rounded-full bg-gradient-to-r from-emerald-400 to-teal-500" />
+            <div className="mx-auto mt-8 h-1 w-16 rounded-full bg-gradient-to-r from-[#4f00ca] to-[#7b3dff]" />
           </div>
         </Container>
       </section>
@@ -221,7 +221,7 @@ export default function AvastOffersPage() {
           <div className="grid gap-4 md:grid-cols-2">
             {features.map(({ name, note, Icon }) => (
               <Card key={name} className="flex gap-4 p-6">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-300">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#4f00ca]/15 text-brand">
                   <Icon className="h-5 w-5" strokeWidth={2} />
                 </span>
                 <div>
@@ -253,16 +253,16 @@ export default function AvastOffersPage() {
                 key={plan.name}
                 className={`flex flex-col p-6 ${
                   plan.featured
-                    ? "ring-2 ring-emerald-400/40"
+                    ? "ring-2 ring-[#4f00ca]/40"
                     : ""
                 }`}
               >
                 {plan.featured && (
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-300">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand">
                     Recommended
                   </p>
                 )}
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-300/80">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand/80">
                   {plan.bestFor}
                 </p>
                 <h3 className="font-display mt-2 text-xl font-semibold text-white">
@@ -372,7 +372,7 @@ export default function AvastOffersPage() {
               <div className="space-y-4">
                 {steps.map(({ step, title, text }) => (
                   <Card key={step} className="flex gap-4 p-5">
-                    <span className="font-display text-2xl font-bold text-emerald-400/60">
+                    <span className="font-display text-2xl font-bold text-brand">
                       {step}
                     </span>
                     <div>
@@ -398,7 +398,7 @@ export default function AvastOffersPage() {
               <div className="grid grid-cols-2 gap-4">
                 {devices.map(({ name, Icon }) => (
                   <Card key={name} className="p-5 text-center">
-                    <Icon className="mx-auto h-6 w-6 text-emerald-300" />
+                    <Icon className="mx-auto h-6 w-6 text-brand" />
                     <p className="font-display mt-3 font-semibold text-white">
                       {name}
                     </p>
@@ -462,7 +462,7 @@ export default function AvastOffersPage() {
             Affiliate disclosure: Some links on this page are sponsored or
             affiliate links. We may be paid if you register or purchase after
             clicking. This helps fund the site. See our{" "}
-            <a href="/disclaimer" className="font-medium text-emerald-300 hover:underline">
+            <a href="/disclaimer" className="font-medium text-brand hover:underline">
               disclaimer
             </a>{" "}
             for more details.

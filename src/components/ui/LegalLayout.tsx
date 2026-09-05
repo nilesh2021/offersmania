@@ -17,7 +17,7 @@ export default function LegalLayout({
     <div className="bg-ink text-fg">
       <div className="border-b border-line bg-[var(--page-soft)]">
         <Container size="sm" className="py-16 md:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Legal
           </p>
           <h1 className="font-display mt-3 text-4xl font-bold text-fg md:text-5xl">

@@ -50,22 +50,22 @@ export default function AIPage() {
     <div className="overflow-hidden bg-ink text-white">
       <section className="relative min-h-[78vh] px-4 py-24">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(34,211,238,0.28),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(79,0,202,0.28),transparent)]"
           aria-hidden
         />
         <div className="pointer-events-none absolute inset-0 bg-grid" />
         <div
-          className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-violet-600/20 blur-[110px]"
+          className="pointer-events-none absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-[#4f00ca]/20 blur-[110px]"
           aria-hidden
         />
 
         <Container className="relative z-10 flex min-h-[60vh] flex-col items-center justify-center text-center">
-          <Badge pulse className="border-cyan-400/30 text-cyan-100">
+          <Badge pulse className="border-[var(--accent)]/30 text-brand">
             AI Rankings 2026
           </Badge>
           <h1 className="font-display mt-6 max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
             Best AI tools &{" "}
-            <span className="bg-gradient-to-r from-cyan-600 via-sky-500 to-violet-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4f00ca] via-[#7b3dff] to-[#9b6dff] bg-clip-text text-transparent">
               reviews
             </span>
           </h1>
@@ -103,7 +103,7 @@ export default function AIPage() {
       <section className="px-4 pb-24">
         <Container size="md">
           <Card className="p-8 md:p-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
               Why it matters
             </p>
             <h2 className="font-display mt-3 text-3xl font-bold md:text-4xl">
@@ -126,7 +126,7 @@ export default function AIPage() {
             </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
-                <Code2 className="mt-0.5 h-5 w-5 text-cyan-300" />
+                <Code2 className="mt-0.5 h-5 w-5 text-brand" />
                 <div>
                   <p className="font-medium">Builders</p>
                   <p className="mt-1 text-sm text-slate-400">
@@ -135,7 +135,7 @@ export default function AIPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4">
-                <GraduationCap className="mt-0.5 h-5 w-5 text-violet-300" />
+                <GraduationCap className="mt-0.5 h-5 w-5 text-brand" />
                 <div>
                   <p className="font-medium">Learners</p>
                   <p className="mt-1 text-sm text-slate-400">

@@ -15,7 +15,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden py-20">
         <div className="pointer-events-none absolute inset-0 bg-mesh" />
         <Container size="md" className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
             Contact
           </p>
           <h1 className="font-display mt-4 text-4xl font-bold md:text-6xl">
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <input
                   name="name"
                   required
-                  className="mt-2 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none ring-violet-400/0 transition placeholder:text-slate-500 focus:border-violet-400/40 focus:ring-4 focus:ring-violet-400/15"
+                  className="mt-2 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[var(--accent)]/40 focus:ring-4 focus:ring-[var(--accent-soft)]"
                   placeholder="Your name"
                 />
               </label>
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   required
-                  className="mt-2 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-violet-400/40 focus:ring-4 focus:ring-violet-400/15"
+                  className="mt-2 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[var(--accent)]/40 focus:ring-4 focus:ring-[var(--accent-soft)]"
                   placeholder="you@email.com"
                 />
               </label>
@@ -61,7 +61,7 @@ export default function ContactPage() {
               Topic
               <select
                 name="topic"
-                className="mt-2 w-full rounded-xl border border-white/15 bg-ink-soft px-4 py-3 text-white outline-none focus:border-violet-400/40"
+                className="mt-2 w-full rounded-xl border border-white/15 bg-ink-soft px-4 py-3 text-white outline-none focus:border-[var(--accent)]/40"
               >
                 <option>Editorial / correction</option>
                 <option>Partnership</option>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                 name="message"
                 required
                 rows={6}
-                className="mt-2 w-full resize-y rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-violet-400/40 focus:ring-4 focus:ring-violet-400/15"
+                className="mt-2 w-full resize-y rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-slate-500 focus:border-[var(--accent)]/40 focus:ring-4 focus:ring-[var(--accent-soft)]"
                 placeholder="How can we help?"
               />
             </label>
@@ -108,7 +108,7 @@ export default function ContactPage() {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="glass flex gap-4 rounded-2xl p-5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-500/15 text-violet-300">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-soft)] text-brand">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>

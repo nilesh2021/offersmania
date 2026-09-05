@@ -73,7 +73,7 @@ export default function SeniorDatingSitesPage() {
 
         <Link
           href="/go/senior-dating"
-          className="inline-flex rounded-lg bg-indigo-600 px-10 py-4 text-lg font-semibold text-white transition hover:bg-indigo-700"
+          className="inline-flex rounded-lg bg-[#4f00ca] px-10 py-4 text-lg font-semibold text-white transition hover:bg-[#3d00a0]"
         >
           Visit Senior Dating Site
         </Link>

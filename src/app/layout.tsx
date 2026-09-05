@@ -55,6 +55,10 @@ export default function RootLayout({
       className={`${outfit.variable} ${jakarta.variable}`}
     >
       <head>
+        <meta
+          name="mitgo-verification"
+          content="e64e7c6e-d239-45bb-a2d4-e80883b809cf"
+        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="min-h-screen bg-ink font-sans text-fg antialiased">

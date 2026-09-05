@@ -39,18 +39,18 @@ export default function SoftwarePage() {
     <div className="overflow-hidden bg-ink text-white">
       <section className="relative min-h-[78vh] px-4 py-24">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(52,211,153,0.26),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(79,0,202,0.28),transparent)]"
           aria-hidden
         />
         <div className="pointer-events-none absolute inset-0 bg-grid" />
 
         <Container className="relative z-10 flex min-h-[60vh] flex-col items-center justify-center text-center">
-          <Badge pulse className="border-emerald-400/30 text-emerald-100">
+          <Badge pulse className="border-[var(--accent)]/30 text-brand">
             Software Reviews 2026
           </Badge>
           <h1 className="font-display mt-6 max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
             Software that earns{" "}
-            <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4f00ca] via-[#7b3dff] to-[#9b6dff] bg-clip-text text-transparent">
               a spot on your stack
             </span>
           </h1>
@@ -84,10 +84,10 @@ export default function SoftwarePage() {
           </div>
 
           <div className="mt-10 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-6">
-            <Workflow className="mt-0.5 h-5 w-5 shrink-0 text-emerald-300" />
+            <Workflow className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
             <p className="text-sm leading-relaxed text-slate-400">
               Looking for a category we have not ranked yet?{" "}
-              <a href="/contact" className="font-medium text-emerald-300 hover:text-emerald-200">
+              <a href="/contact" className="font-medium text-brand hover:opacity-80">
                 Tell us what to review next
               </a>
               .

@@ -126,7 +126,7 @@ export default function BestDatingSitesGermanyPage() {
 
       {/* Ambient background mesh */}
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-pink-500/25 blur-[120px]" />
+        <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-[#4f00ca]/25 blur-[120px]" />
         <div className="absolute right-0 top-1/4 h-[600px] w-[600px] rounded-full bg-purple-600/20 blur-[140px]" />
         <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-rose-400/15 blur-[100px]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(236,72,153,0.08)_0%,_transparent_50%)]" />
@@ -146,7 +146,7 @@ export default function BestDatingSitesGermanyPage() {
 
           <h1 className="hero-title mt-8 text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl">
             Best Dating Sites
-            <span className="mt-2 block bg-gradient-to-r from-pink-300 via-rose-300 to-purple-400 bg-clip-text text-transparent">
+            <span className="mt-2 block bg-gradient-to-r from-[#7b3dff] via-[#9b6dff] to-[#c4b5fd] bg-clip-text text-transparent">
               In Germany
             </span>
           </h1>
@@ -159,10 +159,10 @@ export default function BestDatingSitesGermanyPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="#offers"
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 px-8 py-4 font-semibold shadow-lg shadow-pink-500/25 transition hover:scale-[1.03] hover:shadow-pink-500/40"
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-8 py-4 font-semibold shadow-lg shadow-[0_8px_24px_rgba(79,0,202,0.25)] transition hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(79,0,202,0.4)]"
             >
               <span className="relative z-10">View Top Sites</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-500 opacity-0 transition group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#7b3dff] to-[#4f00ca] opacity-0 transition group-hover:opacity-100" />
             </a>
             <a
               href="#faq"
@@ -180,7 +180,7 @@ export default function BestDatingSitesGermanyPage() {
               { value: "100%", label: "Free to Browse" },
             ].map((stat) => (
               <div key={stat.label} className={`${glassCard} px-6 py-5`}>
-                <p className="text-2xl font-bold text-pink-300">{stat.value}</p>
+                <p className="text-2xl font-bold text-brand">{stat.value}</p>
                 <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
               </div>
             ))}
@@ -248,21 +248,21 @@ export default function BestDatingSitesGermanyPage() {
                     className={`transition hover:bg-white/5 ${i < offers.length - 1 ? "border-b border-white/10" : ""}`}
                   >
                     <td className="p-5">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500/30 to-purple-500/30 text-sm font-bold">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#4f00ca]/30 to-[#7b3dff]/30 text-sm font-bold">
                         {offer.rank}
                       </span>
                     </td>
                     <td className="p-5 font-semibold">{offer.name}</td>
                     <td className="p-5 text-slate-300">{offer.bestFor}</td>
                     <td className="p-5">
-                      <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-300">
+                      <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-brand">
                         {offer.rating}
                       </span>
                     </td>
                     <td className="p-5 text-center">
                       <Link
                         href={`/go/${offer.slug}`}
-                        className="inline-flex rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 px-5 py-2.5 text-sm font-semibold transition hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20"
+                        className="inline-flex rounded-xl bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-5 py-2.5 text-sm font-semibold transition hover:scale-105 hover:shadow-lg hover:shadow-[0_8px_24px_rgba(79,0,202,0.2)]"
                       >
                         Visit Site
                       </Link>
@@ -278,10 +278,10 @@ export default function BestDatingSitesGermanyPage() {
             {offers.map((offer) => (
               <div key={offer.slug} className={`${glassCard} p-6`}>
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500/30 to-purple-500/30 text-sm font-bold">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#4f00ca]/30 to-[#7b3dff]/30 text-sm font-bold">
                     {offer.rank}
                   </span>
-                  <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-300">
+                  <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-brand">
                     {offer.rating}
                   </span>
                 </div>
@@ -289,7 +289,7 @@ export default function BestDatingSitesGermanyPage() {
                 <p className="mt-1 text-sm text-slate-400">{offer.bestFor}</p>
                 <Link
                   href={`/go/${offer.slug}`}
-                  className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 py-3 text-sm font-semibold"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] py-3 text-sm font-semibold"
                 >
                   Visit Site
                 </Link>
@@ -313,11 +313,11 @@ export default function BestDatingSitesGermanyPage() {
               key={offer.slug}
               className={`${glassCard} group relative overflow-hidden p-5 md:p-6`}
             >
-              <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 blur-2xl transition group-hover:scale-150" />
+              <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-[#4f00ca]/20 to-[#7b3dff]/20 blur-2xl transition group-hover:scale-150" />
 
               <div className="relative flex flex-wrap items-center justify-between gap-3">
                 <div className="flex min-w-0 items-center gap-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 text-sm font-bold shadow-md shadow-pink-500/20">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#4f00ca] to-[#7b3dff] text-sm font-bold shadow-md shadow-[0_8px_24px_rgba(79,0,202,0.2)]">
                     {index + 1}
                   </span>
                   <div className="min-w-0">
@@ -327,7 +327,7 @@ export default function BestDatingSitesGermanyPage() {
                     <p className="text-xs text-slate-400">{offer.bestFor}</p>
                   </div>
                 </div>
-                <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+                <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-brand">
                   {offer.rating}
                 </span>
               </div>
@@ -338,7 +338,7 @@ export default function BestDatingSitesGermanyPage() {
 
               <div className="relative mt-4 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-xl border border-emerald-400/20 bg-emerald-500/5 p-4">
-                  <h4 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-emerald-300">
+                  <h4 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-brand">
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20 text-[10px]">
                       ✓
                     </span>
@@ -380,7 +380,7 @@ export default function BestDatingSitesGermanyPage() {
 
               <Link
                 href={`/go/${offer.slug}`}
-                className="relative mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 px-5 py-2.5 text-sm font-semibold shadow-md shadow-pink-500/20 transition hover:scale-[1.02] hover:shadow-pink-500/30"
+                className="relative mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-5 py-2.5 text-sm font-semibold shadow-md shadow-[0_8px_24px_rgba(79,0,202,0.2)] transition hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(79,0,202,0.3)]"
               >
                 Visit {offer.name}
                 <span aria-hidden="true">→</span>
@@ -396,7 +396,7 @@ export default function BestDatingSitesGermanyPage() {
           <div className="flex items-start gap-5">
             <div className="hidden shrink-0 rounded-2xl border border-white/20 bg-white/10 p-4 sm:block">
               <svg
-                className="h-8 w-8 text-pink-400"
+                className="h-8 w-8 text-brand"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -489,7 +489,7 @@ export default function BestDatingSitesGermanyPage() {
                 className={`${glassCard} group flex flex-col p-6 transition hover:border-white/30 hover:bg-white/15`}
               >
                 <span className="text-3xl">{guide.emoji}</span>
-                <span className="mt-4 font-semibold group-hover:text-pink-300">
+                <span className="mt-4 font-semibold group-hover:text-brand">
                   {guide.title}
                 </span>
                 <span className="mt-2 text-sm text-slate-400 transition group-hover:text-slate-300">
@@ -506,14 +506,14 @@ export default function BestDatingSitesGermanyPage() {
         <div
           className={`${glassCard} relative mx-auto max-w-4xl overflow-hidden p-10 text-center md:p-16`}
         >
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-pink-500/10 via-transparent to-purple-500/10" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#4f00ca]/10 via-transparent to-[#7b3dff]/10" />
           <div className="relative">
             <SectionHeading
               eyebrow="Get Started"
               title="Ready To Start Dating?"
               subtitle="Explore our top recommended dating sites and find the right platform for your needs."
               size="large"
-            /><div className="mb-4 flex items-center gap-2 text-sm text-emerald-300">
+            /><div className="mb-4 flex items-center gap-2 text-sm text-brand">
             <span>●</span>
             <span>Free registration available</span>
           </div>

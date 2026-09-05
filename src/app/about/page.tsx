@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="pointer-events-none absolute inset-0 bg-mesh" />
         <div className="pointer-events-none absolute inset-0 bg-grid" />
         <Container size="md" className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
             About
           </p>
           <h1 className="font-display mt-4 max-w-3xl text-4xl font-bold md:text-6xl">
@@ -56,7 +56,7 @@ export default function AboutPage() {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="glass rounded-2xl p-7">
-                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5 text-brand" strokeWidth={1.75} />
                   <h2 className="font-display mt-4 text-xl font-semibold">
                     {item.title}
                   </h2>

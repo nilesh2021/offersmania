@@ -51,7 +51,7 @@ export default function CasualDatingSitesPage() {
 
       {/* Hero */}
 
-     <section className="bg-gradient-to-r from-pink-600 to-rose-700 py-20 text-white">
+     <section className="bg-gradient-to-r from-[#4f00ca] to-[#3d00a0] py-20 text-white">
   <div className="mx-auto max-w-6xl px-4 text-center">
 
     <span className="rounded-full bg-white/20 px-4 py-2 text-sm">
@@ -62,7 +62,7 @@ export default function CasualDatingSitesPage() {
       Best Casual Dating Sites
     </h1>
 
-    <p className="mx-auto mt-6 max-w-3xl text-lg text-pink-100">
+    <p className="mx-auto mt-6 max-w-3xl text-lg text-brand">
       Looking for casual dating opportunities?
       We compared some of the most popular
       platforms to help you find the right site
@@ -343,7 +343,7 @@ export default function CasualDatingSitesPage() {
 
       {/* CTA */}
 
-     <section className="bg-pink-600 py-20 text-white">
+     <section className="bg-[#4f00ca] py-20 text-white">
 
   <div className="mx-auto max-w-4xl px-4 text-center">
 
@@ -358,7 +358,7 @@ export default function CasualDatingSitesPage() {
 
     <Link
       href="/go/realsexclub"
-      className="inline-flex rounded-lg bg-white px-10 py-4 text-lg font-semibold text-pink-700"
+      className="inline-flex rounded-lg bg-white px-10 py-4 text-lg font-semibold text-[#4f00ca]"
     >
       Visit Top Pick
     </Link>

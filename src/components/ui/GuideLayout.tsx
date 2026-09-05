@@ -22,10 +22,10 @@ type Props = {
 };
 
 const accentBar: Record<Accent, string> = {
-  brand: "from-violet-500 to-cyan-400",
-  dating: "from-pink-500 to-fuchsia-500",
-  ai: "from-cyan-400 to-violet-500",
-  software: "from-emerald-400 to-teal-500",
+  brand: "from-[#4f00ca] to-[#7b3dff]",
+  dating: "from-[#4f00ca] to-[#7b3dff]",
+  ai: "from-[#4f00ca] to-[#7b3dff]",
+  software: "from-[#4f00ca] to-[#7b3dff]",
 };
 
 export default function GuideLayout({

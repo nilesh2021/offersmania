@@ -14,13 +14,13 @@ type Props = {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-fg)] shadow-sm hover:opacity-90",
+    "stay-white bg-[var(--btn-primary-bg)] text-[var(--btn-primary-fg)] shadow-sm hover:bg-[var(--accent-hover)]",
   secondary:
     "border border-[var(--btn-secondary-border)] bg-[var(--btn-secondary-bg)] text-[var(--btn-secondary-fg)] hover:border-[var(--line-strong)] hover:bg-[var(--card-hover)]",
   ghost:
     "border border-transparent bg-transparent text-muted hover:border-line hover:bg-[var(--card-hover)] hover:text-fg",
   accent:
-    "stay-white bg-brand text-white shadow-sm hover:opacity-90",
+    "stay-white bg-brand text-white shadow-sm hover:bg-[var(--accent-hover)]",
 };
 
 const sizes: Record<Size, string> = {

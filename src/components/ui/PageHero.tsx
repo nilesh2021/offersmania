@@ -14,19 +14,19 @@ type Props = {
 
 const glows: Record<Accent, string> = {
   brand:
-    "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(124,92,255,0.38),transparent)]",
+    "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(79,0,202,0.28),transparent)]",
   dating:
-    "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(236,72,153,0.38),transparent)]",
-  ai: "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(34,211,238,0.32),transparent)]",
+    "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(79,0,202,0.28),transparent)]",
+  ai: "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(79,0,202,0.28),transparent)]",
   software:
-    "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(52,211,153,0.28),transparent)]",
+    "bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(79,0,202,0.28),transparent)]",
 };
 
 const gradientText: Record<Accent, string> = {
-  brand: "from-violet-500 via-indigo-400 to-cyan-500",
-  dating: "from-pink-500 via-rose-400 to-fuchsia-500",
-  ai: "from-cyan-600 via-sky-500 to-violet-500",
-  software: "from-emerald-600 via-teal-500 to-cyan-500",
+  brand: "from-[#4f00ca] via-[#7b3dff] to-[#9b6dff]",
+  dating: "from-[#4f00ca] via-[#7b3dff] to-[#9b6dff]",
+  ai: "from-[#4f00ca] via-[#7b3dff] to-[#9b6dff]",
+  software: "from-[#4f00ca] via-[#7b3dff] to-[#9b6dff]",
 };
 
 export default function PageHero({

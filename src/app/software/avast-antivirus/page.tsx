@@ -24,10 +24,10 @@ export const metadata: Metadata = {
 };
 
 const ctaClass =
-  "stay-white inline-flex items-center justify-center rounded-lg bg-[#1a73e8] px-8 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:bg-[#1557b0]";
+  "stay-white inline-flex items-center justify-center rounded-lg bg-[#4f00ca] px-8 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-[0_8px_24px_rgba(79,0,202,0.3)] transition hover:bg-[#3d00a0]";
 
 const cardClass =
-  "rounded-xl border border-white/10 bg-[#0f2133] p-6 md:p-7";
+  "rounded-xl border border-white/10 bg-[var(--page-soft)] p-6 md:p-7";
 
 const features = [
   {
@@ -179,7 +179,7 @@ function AvastCta({
 
 export default function AvastAntivirusPage() {
   return (
-    <div className="bg-[#0a1628] text-white">
+    <div className="bg-ink text-white">
       <Script
         id="avast-faq-schema"
         type="application/ld+json"
@@ -189,7 +189,7 @@ export default function AvastAntivirusPage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(26,115,232,0.22),transparent_60%),linear-gradient(180deg,#0b1c30_0%,#0a1628_70%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(79,0,202,0.22),transparent_60%),linear-gradient(180deg,#160b2e_0%,#0c0618_70%)]"
           aria-hidden
         />
         <div
@@ -223,7 +223,7 @@ export default function AvastAntivirusPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {features.map(({ name, note, Icon }) => (
               <div key={name} className={`${cardClass} flex gap-4`}>
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ff6a00]/15 text-[#ff6a00]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#4f00ca]/15 text-brand">
                   <Icon className="h-5 w-5" strokeWidth={2} />
                 </span>
                 <div>
@@ -249,7 +249,7 @@ export default function AvastAntivirusPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {steps.map(({ title, text, Icon }) => (
               <div key={title} className={`${cardClass} text-center`}>
-                <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#ff6a00]/10 text-[#ff6a00]">
+                <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#4f00ca]/10 text-brand">
                   <Icon className="h-7 w-7" strokeWidth={1.75} />
                 </span>
                 <h3 className="font-display mt-5 text-lg font-semibold text-white">
@@ -276,7 +276,7 @@ export default function AvastAntivirusPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {plans.map((plan) => (
               <div key={plan.name} className={`${cardClass} flex flex-col`}>
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#ff6a00]">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">
                   {plan.bestFor}
                 </p>
                 <h3 className="font-display mt-2 text-xl font-semibold text-white">
@@ -306,14 +306,14 @@ export default function AvastAntivirusPage() {
           <div className="mt-10 hidden overflow-hidden rounded-xl border border-white/10 md:block">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10 bg-[#0f2133] text-left text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <tr className="border-b border-white/10 bg-[var(--page-soft)] text-left text-xs font-semibold uppercase tracking-wider text-slate-400">
                   <th className="p-5">Feature</th>
                   <th className="p-5">Free</th>
                   <th className="p-5">Premium Security</th>
                   <th className="p-5">Ultimate</th>
                 </tr>
               </thead>
-              <tbody className="bg-[#0b1c30]/60">
+              <tbody className="bg-[var(--page-soft)]">
                 {comparisonRows.map((row, i) => (
                   <tr
                     key={row.feature}
@@ -369,13 +369,13 @@ export default function AvastAntivirusPage() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((item) => (
               <div key={item.title} className="text-center">
-                <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#ff6a00]/15 text-[#ff6a00]">
+                <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#4f00ca]/15 text-brand">
                   <Shield className="h-5 w-5" />
                 </span>
                 <h3 className="font-display text-base font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#ff6a00]/90">
+                <p className="mt-2 text-sm leading-relaxed text-brand">
                   {item.text}
                 </p>
               </div>
@@ -396,7 +396,7 @@ export default function AvastAntivirusPage() {
           <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
             {devices.map(({ name, Icon }) => (
               <div key={name} className={`${cardClass} text-center`}>
-                <Icon className="mx-auto h-6 w-6 text-[#ff6a00]" />
+                <Icon className="mx-auto h-6 w-6 text-brand" />
                 <p className="font-display mt-3 text-lg font-semibold text-white">
                   {name}
                 </p>
@@ -409,7 +409,7 @@ export default function AvastAntivirusPage() {
       {/* Final CTA band */}
       <section className="px-4 py-16 md:py-20">
         <Container>
-          <div className="rounded-2xl border border-white/10 bg-[#0f2133] px-6 py-14 text-center md:px-12">
+          <div className="rounded-2xl border border-white/10 bg-[var(--page-soft)] px-6 py-14 text-center md:px-12">
             <h2 className="font-display text-3xl font-bold md:text-4xl">
               Ready to compare Avast offers?
             </h2>
@@ -459,7 +459,7 @@ export default function AvastAntivirusPage() {
             clicking. This helps fund the site. See our{" "}
             <a
               href="/disclaimer"
-              className="font-medium text-[#1a73e8] hover:underline"
+              className="font-medium text-brand hover:underline"
             >
               disclaimer
             </a>{" "}

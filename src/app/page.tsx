@@ -29,24 +29,24 @@ const categories = [
     description:
       "Chatbots, writing assistants, image generators, and productivity AI.",
     icon: Brain,
-    tint: "from-cyan-500/20 to-violet-600/5",
-    iconClass: "text-cyan-300",
+    tint: "from-[#4f00ca]/15 to-[#7b3dff]/5",
+    iconClass: "text-brand",
   },
   {
     href: "/software",
     title: "Software",
     description: "VPNs, antivirus, password managers, and everyday utilities.",
     icon: Shield,
-    tint: "from-emerald-500/20 to-teal-600/5",
-    iconClass: "text-emerald-300",
+    tint: "from-[#7b3dff]/15 to-[#4f00ca]/5",
+    iconClass: "text-brand",
   },
   {
     href: "/blog",
     title: "Guides & Reviews",
     description: "Side-by-side comparisons, tutorials, and buying advice.",
     icon: BookOpen,
-    tint: "from-violet-500/20 to-indigo-600/5",
-    iconClass: "text-violet-300",
+    tint: "from-[#4f00ca]/20 to-[#9b6dff]/5",
+    iconClass: "text-brand",
   },
 ];
 
@@ -103,19 +103,19 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-mesh" />
         <div className="pointer-events-none absolute inset-0 bg-grid" />
         <div
-          className="pointer-events-none absolute -right-24 top-32 h-80 w-80 rounded-full bg-cyan-500/10 blur-[100px]"
+          className="pointer-events-none absolute -right-24 top-32 h-80 w-80 rounded-full bg-[#4f00ca]/10 blur-[100px]"
           aria-hidden
         />
 
         <Container className="relative z-10 flex min-h-[84vh] flex-col items-center justify-center py-24 text-center">
           <Badge pulse>
-            <Sparkles className="h-3.5 w-3.5 text-violet-500" />
+            <Sparkles className="h-3.5 w-3.5 text-brand" />
             Independent comparisons · 2026
           </Badge>
 
           <h1 className="font-display hero-title mt-7 max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
             Discover the best
-            <span className="mt-1 block bg-gradient-to-r from-violet-500 via-indigo-400 to-cyan-500 bg-clip-text text-transparent">
+            <span className="mt-1 block bg-gradient-to-r from-[#4f00ca] via-[#7b3dff] to-[#9b6dff] bg-clip-text text-transparent">
               online offers & tools
             </span>
           </h1>
@@ -178,7 +178,7 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-relaxed text-slate-400">
                     {cat.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-slate-300 opacity-0 transition group-hover:opacity-100">
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-brand opacity-0 transition group-hover:opacity-100">
                     Open category
                     <ArrowRight className="h-3.5 w-3.5" />
                   </span>
@@ -197,7 +197,7 @@ export default function Home() {
                 key={stat.label}
                 className="glass rounded-2xl px-6 py-8 text-center"
               >
-                <p className="font-display text-4xl font-bold text-white md:text-5xl">
+                <p className="font-display text-4xl font-bold text-brand md:text-5xl">
                   {stat.value}
                 </p>
                 <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
@@ -222,10 +222,10 @@ export default function Home() {
                 href={item.href}
                 className="group glass rounded-2xl p-6 transition hover:border-white/25 hover:bg-white/[0.08]"
               >
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-violet-300">
+                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
                   {item.category}
                 </span>
-                <h3 className="font-display mt-3 text-xl font-semibold group-hover:text-violet-100">
+                <h3 className="font-display mt-3 text-xl font-semibold group-hover:text-brand">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
@@ -249,7 +249,7 @@ export default function Home() {
               const Icon = reason.icon;
               return (
                 <div key={reason.title} className="glass rounded-2xl p-7">
-                  <div className="mb-4 inline-flex rounded-xl bg-violet-500/15 p-3 text-violet-300">
+                  <div className="mb-4 inline-flex rounded-xl bg-[var(--accent-soft)] p-3 text-brand">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
                   <h3 className="font-display text-lg font-semibold">
@@ -267,9 +267,9 @@ export default function Home() {
 
       <section className="px-4 pb-24">
         <Container>
-          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br from-violet-600/30 via-indigo-800/20 to-cyan-700/20 px-8 py-14 text-center md:px-16">
+          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br from-[#4f00ca]/25 via-[#7b3dff]/15 to-[#9b6dff]/10 px-8 py-14 text-center md:px-16">
             <div
-              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-violet-400/20 blur-3xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#4f00ca]/20 blur-3xl"
               aria-hidden
             />
             <h2 className="font-display relative text-3xl font-bold md:text-5xl">

@@ -117,7 +117,7 @@ export default function CasualDatingSitesPage() {
       </section>
       <Link
         href="/go/mature-dating"
-        className="inline-flex rounded-lg bg-pink-600 px-10 py-4 text-lg font-semibold text-white transition hover:bg-pink-700"
+        className="inline-flex rounded-lg bg-[#4f00ca] px-10 py-4 text-lg font-semibold text-white transition hover:bg-[#3d00a0]"
       >
         Visit Mature Dating Site
       </Link>

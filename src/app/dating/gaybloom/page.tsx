@@ -111,9 +111,9 @@ export default function GaybloomPage() {
       />
 
       <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-violet-500/25 blur-[120px]" />
+        <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-[#4f00ca]/25 blur-[120px]" />
         <div className="absolute right-0 top-1/3 h-[500px] w-[500px] rounded-full bg-fuchsia-600/20 blur-[140px]" />
-        <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-pink-500/15 blur-[100px]" />
+        <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-[#4f00ca]/15 blur-[100px]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(139,92,246,0.1)_0%,_transparent_55%)]" />
       </div>
 
@@ -130,7 +130,7 @@ export default function GaybloomPage() {
           </div>
 
           <h1 className="hero-title mt-8 text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl">
-            <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#7b3dff] via-[#9b6dff] to-[#c4b5fd] bg-clip-text text-transparent">
               Gaybloom
             </span>
             <span className="mt-2 block text-white">
@@ -148,7 +148,7 @@ export default function GaybloomPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               href="/go/gaybloom"
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-600 px-8 py-4 font-semibold shadow-lg shadow-violet-500/25 transition hover:scale-[1.03] hover:shadow-violet-500/40"
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-8 py-4 font-semibold shadow-lg shadow-[0_8px_24px_rgba(79,0,202,0.25)] transition hover:scale-[1.03] hover:shadow-[0_8px_24px_rgba(79,0,202,0.4)]"
             >
               Join Gaybloom
             </Link>
@@ -167,7 +167,7 @@ export default function GaybloomPage() {
               { value: "2026", label: "Updated review" },
             ].map((stat) => (
               <div key={stat.label} className={`${glassCard} px-5 py-4`}>
-                <p className="text-xl font-bold text-violet-300">{stat.value}</p>
+                <p className="text-xl font-bold text-brand">{stat.value}</p>
                 <p className="mt-0.5 text-sm text-slate-400">{stat.label}</p>
               </div>
             ))}
@@ -235,7 +235,7 @@ export default function GaybloomPage() {
           <div className="grid gap-4 md:grid-cols-3">
             {steps.map((item) => (
               <div key={item.step} className={`${glassCard} p-5`}>
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500/40 to-fuchsia-600/40 text-xs font-bold">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#4f00ca]/40 to-[#7b3dff]/40 text-xs font-bold">
                   {item.step}
                 </span>
                 <h3 className="mt-3 font-semibold">{item.title}</h3>
@@ -256,11 +256,11 @@ export default function GaybloomPage() {
           />
 
           <article className={`${glassCard} relative overflow-hidden p-5 md:p-6`}>
-            <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 blur-2xl" />
+            <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-[#4f00ca]/20 to-[#7b3dff]/20 blur-2xl" />
 
             <div className="relative flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-600 text-sm font-bold">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#4f00ca] to-[#7b3dff] text-sm font-bold">
                   ★
                 </span>
                 <div>
@@ -268,7 +268,7 @@ export default function GaybloomPage() {
                   <p className="text-xs text-slate-400">LGBTQ+ men · Online dating</p>
                 </div>
               </div>
-              <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+              <span className="rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-brand">
                 9.2/10
               </span>
             </div>
@@ -281,7 +281,7 @@ export default function GaybloomPage() {
 
             <div className="relative mt-4 grid gap-3 sm:grid-cols-2">
               <div className="rounded-xl border border-emerald-400/20 bg-emerald-500/5 p-4">
-                <h4 className="mb-2 text-sm font-semibold text-emerald-300">Pros</h4>
+                <h4 className="mb-2 text-sm font-semibold text-brand">Pros</h4>
                 <ul className="space-y-1">
                   {pros.map((pro) => (
                     <li key={pro} className="flex gap-2 text-sm text-slate-300">
@@ -306,7 +306,7 @@ export default function GaybloomPage() {
 
             <Link
               href="/go/gaybloom"
-              className="relative mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-600 px-5 py-2.5 text-sm font-semibold shadow-md shadow-violet-500/20 transition hover:scale-[1.02]"
+              className="relative mt-4 inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-[#4f00ca] to-[#7b3dff] px-5 py-2.5 text-sm font-semibold shadow-md shadow-[0_8px_24px_rgba(79,0,202,0.2)] transition hover:scale-[1.02]"
             >
               Visit Gaybloom
               <span aria-hidden="true">→</span>
@@ -371,7 +371,7 @@ export default function GaybloomPage() {
                 className={`${glassCard} group p-5 transition hover:border-white/30 hover:bg-white/15`}
               >
                 <span className="text-2xl">{guide.emoji}</span>
-                <span className="mt-3 block font-semibold group-hover:text-violet-300">
+                <span className="mt-3 block font-semibold group-hover:text-brand">
                   {guide.title}
                 </span>
                 <span className="mt-1 text-sm text-slate-400">Read guide →</span>
@@ -386,7 +386,7 @@ export default function GaybloomPage() {
         <div
           className={`${glassCard} relative mx-auto max-w-4xl overflow-hidden p-8 text-center md:p-12`}
         >
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-fuchsia-500/10" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#4f00ca]/10 via-transparent to-[#7b3dff]/10" />
           <div className="relative">
             <h2 className="text-3xl font-bold md:text-4xl">
               Ready to Meet Someone New?
@@ -395,7 +395,7 @@ export default function GaybloomPage() {
               Join Gaybloom and start chatting with men in the LGBTQ+ community
               today. Free registration available.
             </p>
-            <p className="mt-3 flex items-center justify-center gap-2 text-sm text-emerald-300">
+            <p className="mt-3 flex items-center justify-center gap-2 text-sm text-brand">
               <span>●</span>
               <span>Quick sign-up · Inclusive community</span>
             </p>
