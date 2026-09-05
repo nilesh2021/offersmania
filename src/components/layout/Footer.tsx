@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-6 flex flex-col gap-1 border-t border-line pt-4 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} OffersMania. All rights reserved.</p>
-          <p>Some links are affiliate partnerships.</p>
+          <p>Some links are affiliate partnerships..</p>
         </div>
       </Container>
     </footer>
