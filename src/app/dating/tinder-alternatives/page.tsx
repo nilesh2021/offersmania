@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { hubOffers } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Tinder Alternatives for Adult Dating (2026)",
-  description:
-    "Skip the swipe treadmill. Compare adult dating alternatives built for chemistry, chat, and private connections.",
-};
+export const metadata = buildDatingMetadata("/dating/tinder-alternatives");
 
 export default function TinderAlternativesPage() {
   return (
@@ -22,6 +17,7 @@ export default function TinderAlternativesPage() {
         </>
       }
       subtitle="Adult platforms where people already know what they want — chat, chemistry, and less performance."
+      intro="These Tinder alternatives skip the swipe treadmill — adult dating apps where intent is clearer and chat starts faster."
       primarySlug="cheekycrush"
       offers={hubOffers}
       faqs={[

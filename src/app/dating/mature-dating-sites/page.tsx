@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Mature Adult Dating Sites (2026)",
-  description:
-    "Dating for confident adults 40+. Compare platforms for chemistry, companionship, and private connections.",
-};
+export const metadata = buildDatingMetadata("/dating/mature-dating-sites");
 
 const offers = offersBySlugs(["milffinder", "grannyhunter", "cheekycrush"]);
 
@@ -24,6 +19,7 @@ export default function MatureDatingSitesPage() {
         </>
       }
       subtitle="Connect with confident adults who already know what they want — chemistry, companionship, or both."
+      intro="Compare mature dating sites for adults 40+ — discreet rooms for chemistry, companionship, and private chat without the youth-first feed."
       offers={offers}
       faqs={[
         {

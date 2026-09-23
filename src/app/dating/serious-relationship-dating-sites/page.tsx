@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Serious Relationship Dating Sites (2026) | OffersMania",
-  description:
-    "Conversation-first dating for adults who want chemistry that could become something real.",
-};
+export const metadata = buildDatingMetadata(
+  "/dating/serious-relationship-dating-sites",
+);
 
 const offers = offersBySlugs(["naughtycharm", "cheekycrush", "realsexclub"]);
 
@@ -24,6 +21,7 @@ export default function SeriousRelationshipDatingSitesPage() {
         </>
       }
       subtitle="Start with conversation. Keep it if it turns into something you actually want to keep."
+      intro="Serious dating sites for adults who want chemistry that could become a relationship — compare conversation-first platforms and be honest about intent."
       primarySlug="naughtycharm"
       offers={offers}
       faqs={[

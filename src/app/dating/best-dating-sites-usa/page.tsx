@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { hubOffers } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Best Adult Dating Sites in the USA (2026)",
-  description:
-    "Compare adult dating sites popular with US singles. Private connections, chat, and casual chemistry.",
-};
+export const metadata = buildDatingMetadata("/dating/best-dating-sites-usa");
 
 export default function BestDatingSitesUSAPage() {
   return (
@@ -22,6 +17,7 @@ export default function BestDatingSitesUSAPage() {
         </>
       }
       subtitle="These worldwide platforms have strong US member bases — discreet, fast to join, built for chemistry."
+      intro="We compare adult dating sites USA singles actually use — private chat, casual chemistry, and location filters after you join."
       offers={hubOffers}
       faqs={[
         {

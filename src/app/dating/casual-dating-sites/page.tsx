@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { hubOffers, offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Casual Adult Dating Sites (2026)",
-  description:
-    "Compare casual adult dating sites for chemistry, chat, and no-strings connections. Worldwide 18+ platforms.",
-};
+export const metadata = buildDatingMetadata("/dating/casual-dating-sites");
 
 const extra = offersBySlugs(["fetishpartner"]);
 
@@ -24,13 +19,13 @@ export default function CasualDatingSitesPage() {
         </>
       }
       subtitle="Meet adults who want the same energy — flirting, chat, and nights that stay between you."
-      intro="These platforms are built for chemistry without a five-year plan. Join free, browse, and talk when it clicks."
+      intro="These casual dating sites are built for chemistry without a five-year plan. Compare worldwide 18+ platforms, join free, browse, and talk when it clicks."
       offers={[...hubOffers, ...extra]}
       faqs={[
         {
-          question: "What is casual adult dating?",
+          question: "What are the best casual dating sites?",
           answer:
-            "It is dating without the default of a long-term relationship. Flirting, chat, and physical chemistry — on your terms.",
+            "Casual dating sites focus on flirting, chat, and chemistry without a long-term default. RealSexClub is our top worldwide pick; FetishPartner suits a more alternative crowd.",
         },
         {
           question: "Can I use these sites for free?",

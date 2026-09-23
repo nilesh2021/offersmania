@@ -16,8 +16,8 @@ export default function DatingShell({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(244,63,94,0.22),transparent_55%)]" />
       </div>
 
-      <div className="relative z-10 border-b border-white/10 bg-black/30 px-4 py-2.5 text-center text-xs tracking-wide text-[#f3c9a8] backdrop-blur-md">
-        18+ only. Private adult connections. Stay discreet.
+      <div className="relative z-10 border-b border-white/10 bg-black/30 px-3 py-1.5 text-center text-[11px] tracking-wide text-[#f3c9a8] backdrop-blur-md sm:text-xs">
+        18+ only · private adult connections
       </div>
 
       <div className="relative z-10">{children}</div>

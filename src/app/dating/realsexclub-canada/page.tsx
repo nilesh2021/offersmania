@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "RealSexClub Canada Review 2026 | Casual Dating & Adult Chat",
-  description:
-    "RealSexClub Canada review — casual dating, adult chat, and discreet connections for Canadian adults.",
-};
+export const metadata = buildDatingMetadata("/dating/realsexclub-canada");
 
 const CANADA_LINK =
   "https://t.crdtg3.com/358917/10277/0?po=6456&aff_sub5=SF_006OG000004lmDN";
@@ -27,7 +22,7 @@ export default function RealSexClubCanadaPage() {
         </>
       }
       subtitle="Casual dating, adult chat, and discreet matches for Canadian adults who want chemistry without the noise."
-      intro="Registration is fast. Browse profiles, start a private conversation, and keep it between you."
+      intro="Our RealSexClub Canada review covers adult dating, discreet chat, and casual matches for Canadian singles — fast signup, mobile-friendly, and private by default."
       offers={offers}
       primaryExternalHref={CANADA_LINK}
       faqs={[

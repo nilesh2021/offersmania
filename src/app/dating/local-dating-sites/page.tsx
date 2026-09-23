@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Best Local Dating Sites (2026) | OffersMania",
-  description:
-    "Meet adults near you. Compare location-first dating platforms for chemistry tonight, not next month.",
-};
+export const metadata = buildDatingMetadata("/dating/local-dating-sites");
 
 const offers = offersBySlugs(["fuckfinder", "realsexclub", "dirtydating"]);
 
@@ -24,6 +19,7 @@ export default function LocalDatingSitesPage() {
         </>
       }
       subtitle="Location-first matching for adults who would rather meet than message for weeks."
+      intro="The best local dating sites put distance first — meet singles near you on adult platforms built for tonight, not endless texting."
       primarySlug="fuckfinder"
       offers={offers}
       faqs={[

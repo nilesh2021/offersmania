@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import SiteChrome from "@/components/layout/SiteChrome";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 import "./globals.css";
@@ -64,9 +63,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-ink font-sans text-fg antialiased">
         <ThemeProvider>
-          <Header />
-          <main className="min-h-[calc(100vh-var(--shell-header-total))]">{children}</main>
-          <Footer />
+          <SiteChrome>{children}</SiteChrome>
         </ThemeProvider>
       </body>
     </html>

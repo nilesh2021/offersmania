@@ -16,7 +16,7 @@ type Props = {
 
 function SilhouetteStack() {
   return (
-    <div className="relative mx-auto mt-14 h-64 w-full max-w-md sm:h-72" aria-hidden>
+    <div className="relative mx-auto mt-8 h-48 w-full max-w-sm sm:mt-10 sm:h-56" aria-hidden>
       <div className="absolute left-[8%] top-6 h-52 w-36 -rotate-6 overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-rose-300/30 via-rose-900/40 to-[#1a0c14] shadow-[0_20px_50px_rgba(0,0,0,0.45)] sm:h-60 sm:w-40">
         <div className="absolute inset-x-6 top-8 h-16 rounded-full bg-rose-200/25 blur-md" />
         <div className="absolute inset-x-8 top-20 h-28 rounded-[40%] bg-rose-100/20" />
@@ -47,9 +47,9 @@ export default function DatingHero({
     "inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/12";
 
   return (
-    <section className="relative px-4 pb-16 pt-14 md:pb-20 md:pt-20">
+    <section className="relative px-4 pb-8 pt-8 md:pb-10 md:pt-10">
       <div className="mx-auto max-w-5xl text-center">
-        <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-[#f3c9a8] backdrop-blur-md">
+        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-[#f3c9a8] backdrop-blur-md sm:text-xs">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-rose-400" />
@@ -57,36 +57,40 @@ export default function DatingHero({
           {eyebrow}
         </span>
 
-        <h1 className="font-display mx-auto max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl">
+        <h1 className="font-display mx-auto max-w-4xl text-3xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
           {title}
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
           {subtitle}
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-6 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
           {primary.external ? (
             <a
               href={primary.href}
               target="_blank"
               rel="nofollow sponsored noopener noreferrer"
-              className={primaryClass}
+              className={`${primaryClass} px-6 py-3`}
             >
               {primary.label}
             </a>
           ) : (
-            <Link href={primary.href} rel="nofollow sponsored" className={primaryClass}>
+            <Link
+              href={primary.href}
+              rel="nofollow sponsored"
+              className={`${primaryClass} px-6 py-3`}
+            >
               {primary.label}
             </Link>
           )}
           {secondary &&
             (secondary.external ? (
-              <a href={secondary.href} className={secondaryClass}>
+              <a href={secondary.href} className={`${secondaryClass} px-6 py-3`}>
                 {secondary.label}
               </a>
             ) : (
-              <Link href={secondary.href} className={secondaryClass}>
+              <Link href={secondary.href} className={`${secondaryClass} px-6 py-3`}>
                 {secondary.label}
               </Link>
             ))}

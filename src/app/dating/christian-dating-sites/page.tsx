@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Best Christian Dating Sites (2026) | OffersMania",
-  description:
-    "Compare faith-minded dating platforms and broader connection options for values-first matching.",
-};
+export const metadata = buildDatingMetadata("/dating/christian-dating-sites");
 
 const offers = offersBySlugs(["naughtycharm", "cheekycrush"]);
 
@@ -24,13 +19,13 @@ export default function ChristianDatingSitesPage() {
         </>
       }
       subtitle="If shared values matter, start with platforms that let you talk first. These rooms prioritize conversation and chemistry."
-      intro="Faith-based matching is personal. The platforms below are worldwide chat-first options if you want a more human start than a swipe stack."
+      intro="Christian dating sites and values-first matching are personal. These worldwide chat-first platforms suit adults who want conversation before chemistry — say your faith in your profile."
       offers={offers}
       faqs={[
         {
           question: "Are these dedicated Christian dating sites?",
           answer:
-            "They are conversation-first worldwide platforms. If faith is essential, say so in your profile and take conversations slowly.",
+            "They are conversation-first platforms, not church-only apps. For faith-based dating, state your values clearly and take chat at your pace.",
         },
         {
           question: "Can I join for free?",

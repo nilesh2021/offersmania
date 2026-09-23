@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { EyeOff, MessageCircle, Smartphone, Sparkles } from "lucide-react";
 
@@ -7,12 +6,9 @@ import DatingHero from "@/components/dating/DatingHero";
 import OfferRankCard from "@/components/dating/OfferRankCard";
 import Container from "@/components/ui/Container";
 import { hubOffers } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Adult Dating & Private Connections (2026)",
-  description:
-    "Discreet adult dating for chemistry, chat, and connections. Compare top worldwide platforms for 18+ singles.",
-};
+export const metadata = buildDatingMetadata("/dating");
 
 const reasons = [
   {
@@ -38,6 +34,11 @@ const reasons = [
 ];
 
 const faqs = [
+  {
+    question: "What are the best adult dating sites in 2026?",
+    answer:
+      "Our rankings compare discreet adult dating sites for chat and casual chemistry worldwide. RealSexClub leads for direct intent; NaughtyCharm and CheekyCrush suit a flirty dating vibe; FuckFinder is strongest for local matches.",
+  },
   {
     question: "Are these sites for adults only?",
     answer:
@@ -91,19 +92,30 @@ export default function DatingPage() {
         secondary={{ href: "#rankings", label: "See tonight's rankings" }}
       />
 
-      <section id="rankings" className="scroll-mt-28 px-4 py-8 md:py-12">
+      <section className="px-4 pb-2 pt-2">
+        <Container size="md">
+          <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-slate-400 md:text-base">
+            Compare the{" "}
+            <span className="font-medium text-slate-300">best adult dating sites</span>{" "}
+            for discreet 18+ chat and casual connections. We rank worldwide platforms
+            on chemistry, privacy, and how fast conversations actually start — so you
+            can pick a room and join with confidence.
+          </p>
+        </Container>
+      </section>
+
+      <section id="rankings" className="scroll-mt-4 px-4 py-6 md:py-8">
         <Container size="md">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#f3c9a8]">
             Worldwide · 18+
           </p>
-          <h2 className="font-display mt-3 text-center text-3xl font-bold text-white md:text-5xl">
+          <h2 className="font-display mt-2 text-center text-2xl font-bold text-white md:text-4xl">
             Five rooms. Pick your energy.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-center text-slate-400">
-            General-country adult platforms — not geo-locked, not a lecture.
-            Tap through when you are ready.
+          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-slate-400">
+            Worldwide adult platforms — tap through when you are ready.
           </p>
-          <div className="mt-10 space-y-4">
+          <div className="mt-6 space-y-3">
             {hubOffers.map((offer, i) => (
               <OfferRankCard key={offer.slug} offer={offer} featured={i === 0} />
             ))}
@@ -111,27 +123,21 @@ export default function DatingPage() {
         </Container>
       </section>
 
-      <section className="px-4 py-16">
+      <section className="px-4 py-8 md:py-10">
         <Container>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#f3c9a8]">
-            Why these
-          </p>
-          <h2 className="font-display mt-3 text-center text-3xl font-bold text-white md:text-4xl">
-            Built for chemistry, not small talk
-          </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((reason) => {
               const Icon = reason.icon;
               return (
                 <div
                   key={reason.title}
-                  className="rounded-2xl border border-white/12 bg-white/[0.05] p-5 backdrop-blur-xl"
+                  className="rounded-xl border border-white/12 bg-white/[0.05] p-4 backdrop-blur-xl"
                 >
-                  <Icon className="h-5 w-5 text-[#f3c9a8]" strokeWidth={1.5} />
-                  <h3 className="mt-4 font-display text-lg font-semibold text-white">
+                  <Icon className="h-4 w-4 text-[#f3c9a8]" strokeWidth={1.5} />
+                  <h3 className="mt-2 font-display text-base font-semibold text-white">
                     {reason.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  <p className="mt-1 text-xs leading-relaxed text-slate-400">
                     {reason.text}
                   </p>
                 </div>
@@ -141,49 +147,9 @@ export default function DatingPage() {
         </Container>
       </section>
 
-      <section className="px-4 py-8">
-        <Container size="md">
-          <div className="rounded-3xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-xl md:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f3c9a8]">
-              Stay sharp
-            </p>
-            <h2 className="font-display mt-3 text-2xl font-bold text-white md:text-3xl">
-              Discretion is the point
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-slate-300">
-              Use a photo you are comfortable with. Never send money or
-              documents. Report anyone who pushes you off-platform too fast.
-              Meet in public if you take it offline. You are here for
-              connection — not a performance for strangers.
-            </p>
-          </div>
-        </Container>
-      </section>
-
       <DatingFaq items={faqs} id="dating-hub-faq" />
 
-      <section className="relative px-4 pb-10 pt-4">
-        <Container size="md">
-          <div className="overflow-hidden rounded-3xl border border-[#d4af37]/30 bg-gradient-to-br from-rose-900/40 via-[#1a0c14] to-amber-900/20 p-10 text-center md:p-14">
-            <h2 className="font-display text-3xl font-bold text-white md:text-5xl">
-              Ready when you are
-            </h2>
-            <p className="mx-auto mt-4 max-w-lg text-slate-300">
-              {top.name} is the #1 pick for discreet adult connections
-              worldwide. Join free, browse, and talk tonight.
-            </p>
-            <Link
-              href={`/go/${top.slug}`}
-              rel="nofollow sponsored"
-              className="stay-white mt-8 inline-flex rounded-full bg-[#d4af37] px-10 py-4 font-semibold text-[#1a1204] shadow-[0_10px_30px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:bg-[#e4c45a]"
-            >
-              Visit {top.name}
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      <section className="px-4 pb-20">
+      <section className="px-4 pb-10">
         <Container>
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#f3c9a8]">
             More rooms

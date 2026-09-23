@@ -54,7 +54,7 @@ export default function DatingPageLayout({
       />
 
       {intro && (
-        <section className="px-4 pb-8">
+        <section className="px-4 pb-4">
           <Container size="md">
             <p className="text-center text-base leading-relaxed text-slate-300 md:text-lg">
               {intro}
@@ -63,15 +63,15 @@ export default function DatingPageLayout({
         </section>
       )}
 
-      <section id="rankings" className="scroll-mt-28 px-4 py-10 md:py-14">
+      <section id="rankings" className="scroll-mt-4 px-4 py-6 md:py-8">
         <Container size="md">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#f3c9a8]">
             Ranked for tonight
           </p>
-          <h2 className="font-display mt-3 text-center text-3xl font-bold text-white md:text-4xl">
+          <h2 className="font-display mt-2 text-center text-2xl font-bold text-white md:text-3xl">
             Where chemistry actually happens
           </h2>
-          <div className="mt-10 space-y-4">
+          <div className="mt-6 space-y-3">
             {offers.map((offer, i) => (
               <OfferRankCard
                 key={offer.slug}
@@ -90,7 +90,7 @@ export default function DatingPageLayout({
       <DatingFaq items={faqs} id={faqId} />
 
       {guides && guides.length > 0 && (
-        <section className="px-4 pb-20">
+        <section className="px-4 pb-10">
           <Container>
             <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#f3c9a8]">
               More rooms

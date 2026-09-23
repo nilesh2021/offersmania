@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "GayBloom & PridePair | LGBTQ+ Dating for Men",
-  description:
-    "GayBloom and PridePair are dating platforms for men in the LGBTQ+ community. Meet, chat, and explore new connections.",
-};
+export const metadata = buildDatingMetadata("/dating/gaybloom");
 
 const offers = offersBySlugs(["gaybloom", "pridepair"]);
 
@@ -24,7 +19,7 @@ export default function GaybloomPage() {
         </>
       }
       subtitle="GayBloom and PridePair are built for gay, bi, and queer men — chat, dates, and chemistry without the mainstream noise."
-      intro="Create a profile, browse, and start talking. Inclusive rooms, private messaging, and a community that does not treat you as an afterthought."
+      intro="Compare LGBTQ+ dating for men — GayBloom and PridePair are gay dating apps built for chat, dates, and chemistry without mainstream noise."
       offers={offers}
       faqs={[
         {

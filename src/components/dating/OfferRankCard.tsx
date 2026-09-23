@@ -37,12 +37,12 @@ export default function OfferRankCard({
 
   if (featured) {
     return (
-      <article className="relative overflow-hidden rounded-3xl border border-[#d4af37]/35 bg-white/[0.07] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl md:p-8">
+      <article className="relative overflow-hidden rounded-2xl border border-[#d4af37]/35 bg-white/[0.07] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl md:p-6">
         <div
           className={`pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-gradient-to-br ${offer.glow} blur-2xl`}
           aria-hidden
         />
-        <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
             <div className="flex flex-wrap items-center gap-3">
               <span className="rounded-full border border-[#d4af37]/40 bg-[#d4af37]/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[#f3c9a8]">
@@ -52,7 +52,7 @@ export default function OfferRankCard({
                 {offer.rating} / 10
               </span>
             </div>
-            <h3 className="font-display mt-4 text-3xl font-bold text-white md:text-4xl">
+            <h3 className="font-display mt-3 text-2xl font-bold text-white md:text-3xl">
               {offer.name}
             </h3>
             <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-[#f3c9a8]">
@@ -82,7 +82,7 @@ export default function OfferRankCard({
   }
 
   return (
-    <article className="relative overflow-hidden rounded-2xl border border-white/12 bg-white/[0.05] p-5 backdrop-blur-xl transition hover:border-rose-400/30 hover:bg-white/[0.08] md:p-6">
+    <article className="relative overflow-hidden rounded-xl border border-white/12 bg-white/[0.05] p-4 backdrop-blur-xl transition hover:border-rose-400/30 hover:bg-white/[0.08] md:p-5">
       <div
         className={`pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-gradient-to-br ${offer.glow} blur-2xl`}
         aria-hidden

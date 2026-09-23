@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { offersBySlugs } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Senior Dating Sites (2026)",
-  description:
-    "Companionship and chemistry for adults 50+. Compare discreet dating platforms for experienced singles.",
-};
+export const metadata = buildDatingMetadata("/dating/senior-dating-sites");
 
 const offers = offersBySlugs(["grannyhunter", "milffinder", "cheekycrush"]);
 
@@ -24,6 +19,7 @@ export default function SeniorDatingSitesPage() {
         </>
       }
       subtitle="Dating rooms for older adults — friendship, chemistry, and private chat without the noise."
+      intro="Senior dating sites for adults 50+ who want companionship or chemistry — compare discreet platforms ranked for experienced singles."
       primarySlug="grannyhunter"
       offers={offers}
       faqs={[

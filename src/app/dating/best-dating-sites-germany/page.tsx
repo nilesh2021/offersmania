@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { hubOffers } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Best Adult Dating Sites in Germany (2026)",
-  description:
-    "Compare adult dating platforms used in Germany for casual connections, chat, and private matching.",
-};
+export const metadata = buildDatingMetadata("/dating/best-dating-sites-germany");
 
 export default function BestDatingSitesGermanyPage() {
   return (
@@ -22,6 +17,7 @@ export default function BestDatingSitesGermanyPage() {
         </>
       }
       subtitle="Worldwide adult platforms with members across Germany — discreet signup, fast chat, no lecture."
+      intro="Compare adult dating sites Germany with active members in Berlin, Munich, Hamburg, and beyond — same rankings, localized intent."
       offers={hubOffers}
       faqs={[
         {

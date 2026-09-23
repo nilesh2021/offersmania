@@ -1,13 +1,8 @@
-import type { Metadata } from "next";
-
 import DatingPageLayout from "@/components/dating/DatingPageLayout";
 import { hubOffers } from "@/data/datingOffers";
+import { buildDatingMetadata } from "@/lib/datingSeo";
 
-export const metadata: Metadata = {
-  title: "Best BBW Dating Sites (2026) | OffersMania",
-  description:
-    "Body-positive adult dating — compare worldwide platforms where plus-size singles actually get seen.",
-};
+export const metadata = buildDatingMetadata("/dating/bbw-dating-sites");
 
 export default function BbwDatingSitesPage() {
   return (
@@ -22,12 +17,13 @@ export default function BbwDatingSitesPage() {
         </>
       }
       subtitle="Worldwide adult rooms with large member bases — show up as you are and talk to people who want you."
+      intro="BBW dating sites and body-positive adult platforms with real member volume — compare where plus-size singles get seen and messaged."
       offers={hubOffers}
       faqs={[
         {
-          question: "Are there dedicated BBW dating sites here?",
+          question: "What are the best BBW dating sites?",
           answer:
-            "These are large worldwide adult platforms. Look for active members in your area and profiles that match the energy you want.",
+            "Dedicated BBW apps are rare; these large adult platforms have strong plus-size communities. Look for active local members and profiles that match the energy you want.",
         },
         {
           question: "Which should I try first?",
