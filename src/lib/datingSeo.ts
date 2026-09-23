@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
-/** Align with root layout metadataBase */
-export const SITE_URL = "https://offersmania.com";
+import { SITE_URL } from "@/lib/site";
+
+export { SITE_URL };
 
 type DatingSeoEntry = {
   title: string;

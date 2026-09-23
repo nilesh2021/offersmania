@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 
 import SiteChrome from "@/components/layout/SiteChrome";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { SITE_URL } from "@/lib/site";
 
 import "./globals.css";
 
@@ -20,7 +21,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://offersmania.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "OffersMania — Compare AI Tools & Software",
     template: "%s | OffersMania",

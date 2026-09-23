@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 
+import { SITE_URL } from "@/lib/site";
+
 export const siteConfig = {
   name: "OffersMania",
   description:
     "Discover AI tools, software reviews, and digital products.",
-  url: "https://offersmania.com",
+  url: SITE_URL,
 };
 
 export function generateMetadata({

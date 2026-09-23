@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
   return (
     <LegalLayout title="Privacy Policy">
       <p>
-        OffersMania (“we”, “us”) operates offersmania.com. This page explains
+        OffersMania (“we”, “us”) operates offersmania.net. This page explains
         what information may be collected when you use the site and how it is
         used.
       </p>
