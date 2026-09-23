@@ -1,48 +1,49 @@
 import type { Metadata } from "next";
 
-import GuideLayout from "@/components/ui/GuideLayout";
-import AffiliateButton from "@/components/ui/AffiliateButton";
+import DatingPageLayout from "@/components/dating/DatingPageLayout";
+import { offersBySlugs } from "@/data/datingOffers";
 
 export const metadata: Metadata = {
   title: "Best Local Dating Sites (2026) | OffersMania",
   description:
-    "Compare local dating sites and apps for meeting singles near you.",
+    "Meet adults near you. Compare location-first dating platforms for chemistry tonight, not next month.",
 };
+
+const offers = offersBySlugs(["fuckfinder", "realsexclub", "dirtydating"]);
 
 export default function LocalDatingSitesPage() {
   return (
-    <GuideLayout
-      accent="dating"
-      eyebrow="Nearby"
-      title="Best local dating sites"
-      subtitle="When distance is the filter — platforms that emphasize people actually in your city."
-      related={[
+    <DatingPageLayout
+      eyebrow="Nearby · 18+"
+      title={
+        <>
+          Someone{" "}
+          <span className="bg-gradient-to-r from-rose-400 to-[#f3c9a8] bg-clip-text text-transparent">
+            close enough
+          </span>
+        </>
+      }
+      subtitle="Location-first matching for adults who would rather meet than message for weeks."
+      primarySlug="fuckfinder"
+      offers={offers}
+      faqs={[
         {
-          title: "Casual Dating Sites",
-          description: "Lighter connections and social dating.",
-          href: "/dating/casual-dating-sites",
-          category: "Dating",
+          question: "Which site is best for local dating?",
+          answer:
+            "FuckFinder is built around people nearby. RealSexClub and DirtyDating also let you filter by location after you join.",
         },
         {
-          title: "Best Dating Sites USA",
-          description: "National platforms with strong local pockets.",
-          href: "/dating/best-dating-sites-usa",
-          category: "Dating",
+          question: "Does this work in smaller towns?",
+          answer:
+            "Density is higher in cities. Try more than one platform if your town is quiet.",
         },
       ]}
-    >
-      <p>
-        Local dating works when the member base in your city is dense enough.
-        Large national apps often win in metros; niche sites can feel empty in
-        smaller towns.
-      </p>
-      <p>
-        Check location filters, map views, and whether the app lets you hide
-        your profile from contacts.
-      </p>
-      <div className="pt-4">
-        <AffiliateButton href="/go/fuckfinder">View a local-focused option</AffiliateButton>
-      </div>
-    </GuideLayout>
+      guides={[
+        { href: "/dating", title: "All rankings" },
+        { href: "/dating/casual-dating-sites", title: "Casual" },
+        { href: "/dating/best-dating-sites-usa", title: "USA" },
+      ]}
+      faqId="local-dating-faq"
+    />
   );
 }

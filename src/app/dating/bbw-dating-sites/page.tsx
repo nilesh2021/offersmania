@@ -1,47 +1,46 @@
 import type { Metadata } from "next";
 
-import GuideLayout from "@/components/ui/GuideLayout";
-import Button from "@/components/ui/Button";
+import DatingPageLayout from "@/components/dating/DatingPageLayout";
+import { hubOffers } from "@/data/datingOffers";
 
 export const metadata: Metadata = {
   title: "Best BBW Dating Sites (2026) | OffersMania",
   description:
-    "Compare BBW dating sites and body-positive platforms for meeting plus-size singles.",
+    "Body-positive adult dating — compare worldwide platforms where plus-size singles actually get seen.",
 };
 
 export default function BbwDatingSitesPage() {
   return (
-    <GuideLayout
-      accent="dating"
-      eyebrow="Community"
-      title="Best BBW dating sites"
-      subtitle="Body-positive platforms and communities built around plus-size dating — not as an afterthought."
-      related={[
+    <DatingPageLayout
+      eyebrow="Body-positive · 18+"
+      title={
+        <>
+          Desire without{" "}
+          <span className="bg-gradient-to-r from-rose-400 to-[#f3c9a8] bg-clip-text text-transparent">
+            the disclaimer
+          </span>
+        </>
+      }
+      subtitle="Worldwide adult rooms with large member bases — show up as you are and talk to people who want you."
+      offers={hubOffers}
+      faqs={[
         {
-          title: "Casual Dating Sites",
-          description: "Broader casual platforms with large member bases.",
-          href: "/dating/casual-dating-sites",
-          category: "Dating",
+          question: "Are there dedicated BBW dating sites here?",
+          answer:
+            "These are large worldwide adult platforms. Look for active members in your area and profiles that match the energy you want.",
         },
         {
-          title: "Mature Dating Sites",
-          description: "Connections for adults 40+.",
-          href: "/dating/mature-dating-sites",
-          category: "Dating",
+          question: "Which should I try first?",
+          answer:
+            "Start with RealSexClub for casual chemistry, or NaughtyCharm if you want a flirty dating feel.",
         },
       ]}
-    >
-      <p>
-        Dedicated BBW and body-positive dating sites exist because mainstream
-        apps often bury the experience in extra filters. Look for active
-        members in your region, photo-first profiles you actually want, and
-        moderation that keeps the community respectful.
-      </p>
-      <div className="pt-4">
-        <Button href="/dating" variant="accent">
-          Browse dating guides
-        </Button>
-      </div>
-    </GuideLayout>
+      guides={[
+        { href: "/dating", title: "All rankings" },
+        { href: "/dating/casual-dating-sites", title: "Casual" },
+        { href: "/dating/mature-dating-sites", title: "Mature" },
+      ]}
+      faqId="bbw-dating-faq"
+    />
   );
 }

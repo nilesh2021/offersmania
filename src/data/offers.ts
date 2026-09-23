@@ -1,16 +1,38 @@
 export const offers: Record<string, string> = {
   realsexclub:
-    "https://t.crdtg2.com/358917/7964?aff_sub5=SF_006OG000004ImDN",
-
-  fetishpartner:
-    "https://t.crdtg2.com/358917/5055?aff_sub5=SF_006OG000004ImDN",
-
+    "https://t.aslr1.com/358917/7964?aff_sub5=SF_006OG000004ImDN",
+  naughtycharm:
+    "https://t.aslr1.com/358917/10376/0?po=6456&aff_sub5=SF_006OG000004ImDN",
+  cheekycrush:
+    "https://t.aslr1.com/358917/10377/0?po=6456&aff_sub5=SF_006OG000004ImDN",
+  dirtydating:
+    "https://t.aslr1.com/358917/5421?aff_sub5=SF_006OG000004ImDN",
   fuckfinder:
-    "https://t.crdtg2.com/358917/7346?aff_sub5=SF_006OG000004ImDN",
-
-   "usa-dating":
-    "https://t.crdtg2.com/358917/7346?aff_sub5=SF_006OG000004ImDN",
-
+    "https://t.aslr1.com/358917/7346?aff_sub5=SF_006OG000004ImDN",
+  fetishpartner:
+    "https://t.aslr1.com/358917/5055?aff_sub5=SF_006OG000004ImDN",
   gaybloom:
-    "https://t.crdtg3.com/358917/10378/0?po=6456&aff_sub5=SF_006OG000004lmDN",
-};  
+    "https://t.aslr1.com/358917/10378/0?po=6456&aff_sub5=SF_006OG000004ImDN",
+  pridepair:
+    "https://t.aslr1.com/358917/10379/0?po=6456&aff_sub5=SF_006OG000004ImDN",
+  milffinder:
+    "https://t.aslr1.com/358917/4999?aff_sub5=SF_006OG000004ImDN",
+  grannyhunter:
+    "https://t.aslr1.com/358917/7570?aff_sub5=SF_006OG000004ImDN",
+  litlatinz:
+    "https://t.aslr1.com/358917/7410?aff_sub5=SF_006OG000004ImDN",
+  manfinder:
+    "https://t.aslr1.com/358917/6488?aff_sub5=SF_006OG000004ImDN",
+  transdate:
+    "https://t.aslr1.com/358917/6497?aff_sub5=SF_006OG000004ImDN",
+  "usa-dating":
+    "https://t.aslr1.com/358917/7346?aff_sub5=SF_006OG000004ImDN",
+  "serious-dating":
+    "https://t.aslr1.com/358917/10376/0?po=6456&aff_sub5=SF_006OG000004ImDN",
+  "tinder-alt":
+    "https://t.aslr1.com/358917/10377/0?po=6456&aff_sub5=SF_006OG000004ImDN",
+  "mature-dating":
+    "https://t.aslr1.com/358917/4999?aff_sub5=SF_006OG000004ImDN",
+  "senior-dating":
+    "https://t.aslr1.com/358917/7570?aff_sub5=SF_006OG000004ImDN",
+};

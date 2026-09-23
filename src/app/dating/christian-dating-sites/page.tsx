@@ -1,50 +1,49 @@
 import type { Metadata } from "next";
 
-import GuideLayout from "@/components/ui/GuideLayout";
-import Button from "@/components/ui/Button";
+import DatingPageLayout from "@/components/dating/DatingPageLayout";
+import { offersBySlugs } from "@/data/datingOffers";
 
 export const metadata: Metadata = {
   title: "Best Christian Dating Sites (2026) | OffersMania",
   description:
-    "Compare Christian dating platforms for faith-based relationships and meaningful connections.",
+    "Compare faith-minded dating platforms and broader connection options for values-first matching.",
 };
+
+const offers = offersBySlugs(["naughtycharm", "cheekycrush"]);
 
 export default function ChristianDatingSitesPage() {
   return (
-    <GuideLayout
-      accent="dating"
-      eyebrow="Faith-based"
-      title="Best Christian dating sites"
-      subtitle="Platforms that put shared values and faith at the center of matching — not just photos."
-      related={[
+    <DatingPageLayout
+      eyebrow="Values · connections"
+      title={
+        <>
+          Dating with{" "}
+          <span className="bg-gradient-to-r from-rose-300 to-[#f3c9a8] bg-clip-text text-transparent">
+            more than a photo
+          </span>
+        </>
+      }
+      subtitle="If shared values matter, start with platforms that let you talk first. These rooms prioritize conversation and chemistry."
+      intro="Faith-based matching is personal. The platforms below are worldwide chat-first options if you want a more human start than a swipe stack."
+      offers={offers}
+      faqs={[
         {
-          title: "Serious Relationship Dating Sites",
-          description: "Long-term matchmaking without the swipe treadmill.",
-          href: "/dating/serious-relationship-dating-sites",
-          category: "Dating",
+          question: "Are these dedicated Christian dating sites?",
+          answer:
+            "They are conversation-first worldwide platforms. If faith is essential, say so in your profile and take conversations slowly.",
         },
         {
-          title: "Best Dating Sites USA",
-          description: "Broader US platforms if you want more options.",
-          href: "/dating/best-dating-sites-usa",
-          category: "Dating",
+          question: "Can I join for free?",
+          answer:
+            "Most allow free registration. Premium plans may unlock extra messaging.",
         },
       ]}
-    >
-      <p>
-        Christian dating sites typically screen for faith, denomination, or
-        values-based prompts so you spend less time filtering for the basics.
-        Expect slower, more profile-heavy matching than swipe-first apps.
-      </p>
-      <p>
-        Compare community size in your region, moderation, and whether
-        messaging is free before you pay for a plan.
-      </p>
-      <div className="pt-4">
-        <Button href="/dating" variant="accent">
-          Browse dating guides
-        </Button>
-      </div>
-    </GuideLayout>
+      guides={[
+        { href: "/dating", title: "All rankings" },
+        { href: "/dating/serious-relationship-dating-sites", title: "Serious" },
+        { href: "/dating/best-dating-sites-usa", title: "USA" },
+      ]}
+      faqId="christian-dating-faq"
+    />
   );
 }

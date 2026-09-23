@@ -5,7 +5,7 @@
 /* ── Design tokens ─────────────────────────────────────────────── */
 @theme inline {
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 
   --color-ink: var(--page);
   --color-ink-soft: var(--page-soft);
@@ -77,8 +77,7 @@ html[data-theme="light"] {
   --background: var(--page);
   --foreground: var(--fg);
   --header-h: 4rem;
-  --subnav-h: 2.75rem;
-  --shell-header-total: calc(var(--header-h) + var(--subnav-h));
+  --shell-header-total: var(--header-h);
 }
 
 /* Dark — deep purple night + white text */
@@ -139,7 +138,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   letter-spacing: -0.03em;
   font-weight: 650;
   line-height: 1.15;
@@ -367,4 +366,80 @@ html[data-theme="light"] select {
 
 html[data-theme="light"] .bg-white\/95 {
   border: 1px solid var(--line);
+}
+
+/* ── Dating night canvas (isolates adult landing from light-theme overrides) ── */
+.dating-night {
+  --page: #0a0408;
+  --page-soft: #16080f;
+  --fg: #fff7f8;
+  --muted: #d4b8c4;
+  --line: rgba(255, 232, 240, 0.14);
+  --line-strong: rgba(255, 232, 240, 0.28);
+  --card: #1a0c14;
+  --accent: #f3c9a8;
+  --accent-hover: #f8ddc4;
+  --accent-soft: rgba(212, 175, 55, 0.16);
+  --btn-primary-bg: #d4af37;
+  --btn-primary-fg: #1a1204;
+  --heading-accent: #d4af37;
+  background: #0a0408;
+  color: #fff7f8;
+  position: relative;
+  isolation: isolate;
+}
+
+.dating-night::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(255, 220, 230, 0.35) 0.5px, transparent 0.5px);
+  background-size: 3px 3px;
+}
+
+.dating-grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+html[data-theme="light"] .dating-night .text-white,
+html[data-theme="light"] .dating-night .text-white\/90,
+html[data-theme="light"] .dating-night .text-white\/95 {
+  color: #fff7f8;
+}
+
+html[data-theme="light"] .dating-night .text-slate-200,
+html[data-theme="light"] .dating-night .text-slate-300,
+html[data-theme="light"] .dating-night .text-slate-400,
+html[data-theme="light"] .dating-night .text-slate-500 {
+  color: #d4b8c4;
+}
+
+html[data-theme="light"] .dating-night .border-white\/10,
+html[data-theme="light"] .dating-night .border-white\/12,
+html[data-theme="light"] .dating-night .border-white\/15,
+html[data-theme="light"] .dating-night .border-white\/20,
+html[data-theme="light"] .dating-night .border-white\/25,
+html[data-theme="light"] .dating-night .border-white\/30,
+html[data-theme="light"] .dating-night .border-white\/40 {
+  border-color: rgba(255, 232, 240, 0.16);
+}
+
+html[data-theme="light"] .dating-night .bg-white\/5,
+html[data-theme="light"] .dating-night .bg-white\/\[0\.05\],
+html[data-theme="light"] .dating-night .bg-white\/\[0\.06\],
+html[data-theme="light"] .dating-night .bg-white\/\[0\.08\],
+html[data-theme="light"] .dating-night .bg-white\/10,
+html[data-theme="light"] .dating-night .bg-white\/\[0\.09\],
+html[data-theme="light"] .dating-night .bg-white\/\[0\.12\],
+html[data-theme="light"] .dating-night .bg-white\/\[0\.14\] {
+  background-color: rgba(255, 247, 248, 0.08);
 }

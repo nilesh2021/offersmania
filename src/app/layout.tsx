@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -7,10 +7,11 @@ import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 import "./globals.css";
 
-const outfit = Outfit({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-outfit",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
 });
 
 const jakarta = Plus_Jakarta_Sans({
@@ -52,7 +53,7 @@ export default function RootLayout({
       data-theme="light"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
-      className={`${outfit.variable} ${jakarta.variable}`}
+      className={`${spaceGrotesk.variable} ${jakarta.variable}`}
     >
       <head>
         <meta

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import DatingShell from "@/components/dating/DatingShell";
+
 export const metadata: Metadata = {
   robots: {
     index: false,
@@ -17,5 +19,5 @@ export default function DatingLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <DatingShell>{children}</DatingShell>;
 }

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import LogoMark from "@/components/brand/LogoMark";
+
 type Props = {
   className?: string;
   variant?: "default" | "onDark";
@@ -18,22 +20,21 @@ export default function Logo({
       aria-label="OffersMania home"
     >
       <span
-        className={`relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-brand ${
-          onDark
-            ? "border border-white/25 shadow-none"
-            : "shadow-[0_0_20px_rgba(147,56,193,0.35)]"
+        className={`relative shrink-0 transition-transform duration-200 group-hover:scale-[1.02] ${
+          onDark ? "" : "shadow-[0_0_20px_rgba(147,56,193,0.35)]"
         }`}
       >
-        <span className="stay-white font-display text-[13px] font-bold tracking-tight text-white">
-          OM
-        </span>
+        <LogoMark size={36} />
       </span>
       <span
-        className={`font-display text-[1.2rem] font-semibold tracking-tight ${
+        className={`font-display text-[1.15rem] font-bold tracking-tight sm:text-[1.2rem] ${
           onDark ? "text-[var(--header-fg)]" : "text-fg"
         }`}
       >
-        OffersMania
+        <span className={onDark ? "text-[var(--header-fg)]" : "text-fg"}>
+          Offers
+        </span>
+        <span className="text-[var(--heading-accent)]">Mania</span>
       </span>
     </Link>
   );
