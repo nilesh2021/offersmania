@@ -17,6 +17,9 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "3uvolrkzksSadIy3lwLliFYbte7UGc6w1bOtqwuMrF0",
+  },
   other: {
     "impact-site-verification": "38650714-f28a-47c5-a6a1-1e26d3d1d43a",
   },
