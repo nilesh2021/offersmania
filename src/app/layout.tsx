@@ -59,6 +59,8 @@ export default function RootLayout({
           name="mitgo-verification"
           content="e64e7c6e-d239-45bb-a2d4-e80883b809cf"
         />
+
+<meta name="google-site-verification" content="3uvolrkzksSadIy3lwLliFYbte7UGc6w1bOtqwuMrF0" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="min-h-screen bg-ink font-sans text-fg antialiased">
