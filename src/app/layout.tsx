@@ -64,7 +64,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-ink font-sans text-fg antialiased">
         <ThemeProvider>
           <Header />
-          <main className="min-h-[calc(100vh-var(--header-h))]">{children}</main>
+          <main className="min-h-[calc(100vh-var(--shell-header-total))]">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type Variant = "primary" | "secondary" | "ghost" | "accent";
+type Variant = "primary" | "secondary" | "ghost" | "accent" | "highlight";
 type Size = "sm" | "md" | "lg";
 
 type Props = {
@@ -21,6 +21,8 @@ const variants: Record<Variant, string> = {
     "border border-transparent bg-transparent text-muted hover:border-line hover:bg-[var(--card-hover)] hover:text-fg",
   accent:
     "stay-white bg-brand text-white shadow-sm hover:bg-[var(--accent-hover)]",
+  highlight:
+    "bg-[var(--btn-highlight-bg)] text-[var(--btn-highlight-fg)] shadow-sm hover:brightness-[0.97]",
 };
 
 const sizes: Record<Size, string> = {

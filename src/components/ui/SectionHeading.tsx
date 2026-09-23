@@ -16,13 +16,6 @@ const eyebrowColor: Record<Accent, string> = {
   software: "text-brand",
 };
 
-const barColor: Record<Accent, string> = {
-  brand: "from-[#4f00ca] to-[#7b3dff]",
-  dating: "from-[#4f00ca] to-[#7b3dff]",
-  ai: "from-[#4f00ca] to-[#7b3dff]",
-  software: "from-[#4f00ca] to-[#7b3dff]",
-};
-
 export default function SectionHeading({
   eyebrow,
   title,
@@ -57,7 +50,7 @@ export default function SectionHeading({
         </p>
       )}
       <div
-        className={`mt-5 h-0.5 w-16 rounded-full bg-gradient-to-r ${barColor[accent]} ${align === "center" ? "mx-auto" : ""}`}
+        className={`section-heading-bar mt-5 h-0.5 w-16 rounded-full ${align === "center" ? "mx-auto" : ""}`}
       />
     </div>
   );
